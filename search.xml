@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>java-简谈构造方法</title>
-    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
-<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
-<hr>
-<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
-<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
-{   
-
-    public static void main(String[] args) {
-        Student p1 =new Student(18,&quot;jack&quot;);
-        Student p2 =new Student(19,&quot;jack&quot;);
-        p1.printlnof();
-        p2.getAge();
-        p2.printlnof();
-    }
-}
-
-    class Student{
-        private int age;
-        private String name;
-            public Student(int age,String name) {
-                this.age=age;
-                this.name=name;
-            }
-            public void printlnof() {
-                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
-            }
-            public void getAge() {
-                int s=10;
-                age+=s;
-            }
-    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/06/19/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -151,5 +111,48 @@
   代码...   
 (```)   
 </code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>java-简谈构造方法</title>
+    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
+<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
+<hr>
+<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
+<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
+{   
+
+    public static void main(String[] args) {
+        Student p1 =new Student(18,&quot;jack&quot;);
+        Student p2 =new Student(19,&quot;jack&quot;);
+        p1.printlnof();
+        p2.getAge();
+        p2.printlnof();
+    }
+}
+
+    class Student{
+        private int age;
+        private String name;
+            public Student(int age,String name) {
+                this.age=age;
+                this.name=name;
+            }
+            public void printlnof() {
+                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
+            }
+            public void getAge() {
+                int s=10;
+                age+=s;
+            }
+    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>构造方法</tag>
+      </tags>
   </entry>
 </search>
