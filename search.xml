@@ -155,36 +155,4 @@
 (```)   
 </code></pre>]]></content>
   </entry>
-  <entry>
-    <title>java-方法</title>
-    <url>/2020/07/23/%E2%80%9Cjava-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="java-方法"><a href="#java-方法" class="headerlink" title="java-方法"></a>java-方法</h3><a id="more"></a>
-<hr>
-<ul>
-<li>方法的使用是为了增加代码的重复利用性   </li>
-</ul>
-<ol>
-<li>方法在Java中相当于一种机制：   </li>
-</ol>
-<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
-<hr>
-<ul>
-<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>方法内不能再写方法  </li>
-<li>类体内可以定义多个方法   </li>
-</ol>
-<hr>
-<p>….待更新</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>构造方法</tag>
-      </tags>
-  </entry>
 </search>
