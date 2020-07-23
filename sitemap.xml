@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/07/23/java-%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2020-07-23T02:22:26.418Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    
+    <lastmod>2020-07-23T02:16:24.591Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</loc>
     
     <lastmod>2020-07-14T15:27:25.659Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2020-07-14T15:27:17.105Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
-    
-    <lastmod>2020-07-14T15:16:24.248Z</lastmod>
     
   </url>
   
