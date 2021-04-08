@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>java-方法</title>
+    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
+<ul>
+<li>方法的使用是为了增加代码的重复利用性   </li>
+</ul>
+<ol>
+<li>方法在Java中相当于一种机制：   </li>
+</ol>
+<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
+<hr>
+<ul>
+<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
+<li>方法内不能再写方法  </li>
+<li>类体内可以定义多个方法   </li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java中的参数列表</title>
+    <url>/2021/04/08/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<h4 id="关于Java中参数列表"><a href="#关于Java中参数列表" class="headerlink" title="关于Java中参数列表"></a>关于Java中参数列表</h4><a id="more"></a>
+<h2 id="2021-4-8"><a href="#2021-4-8" class="headerlink" title="2021.4.8"></a>2021.4.8</h2><hr>
+<pre><code>
+public class Demo_arrylist {
+
+    public static void main(String[] args) {
+
+        Demo demo = new Demo();
+        demo.show(&quot;小米&quot;);
+    }
+}
+
+    class Demo{
+        String name= &quot;华为&quot;;
+        public void  show(String name) {
+
+            System.out.println(name+ &quot; 的友商是  &quot;+ this.name );
+        }
+    }
+</code></pre><hr>
+<ul>
+<li>在    public void  show(String name) {} 中加入参数列表 string name 相当于形参，在调用show（）方法的时候 需要赋值</li>
+<li>在show（）方法中调用 demo类的成员变量 可以用this关键字 </li>
+</ul>
+<hr>
+<h5 id="自己的误解："><a href="#自己的误解：" class="headerlink" title="自己的误解："></a>自己的误解：</h5><ul>
+<li>以为参数列表只是标指 方法中运用的变量 </li>
+<li>实质上也可以看作一个对象 万物皆对象</li>
+</ul>
+<hr>
+<p>认知不停 待更新见解…….</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>参数列表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/06/19/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -20,46 +93,64 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java-简谈构造方法</title>
-    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
-<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
+    <title>函数基础</title>
+    <url>/2020/07/28/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="函数基础回顾"><a href="#函数基础回顾" class="headerlink" title="函数基础回顾"></a>函数基础回顾</h3><hr>
+<h4 id="例"><a href="#例" class="headerlink" title="例:"></a>例:</h4><ul>
+<li>定义函数</li>
+</ul>
 <hr>
-<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
-<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
-{   
+<ul>
+<li>以下是 max() 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：</li>
+<li>函数定义提供了函数的实际主体   </li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line"> </span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    public static void main(String[] args) {
-        Student p1 =new Student(18,&quot;jack&quot;);
-        Student p2 =new Student(19,&quot;jack&quot;);
-        p1.printlnof();
-        p2.getAge();
-        p2.printlnof();
-    }
-}
 
-    class Student{
-        private int age;
-        private String name;
-            public Student(int age,String name) {
-                this.age=age;
-                this.name=name;
-            }
-            public void printlnof() {
-                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
-            }
-            public void getAge() {
-                int s=10;
-                age+=s;
-            }
-    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
+<hr>
+<ul>
+<li>函数声明<br>：函数声明告诉编译器函数的名称、返回类型和参数</li>
+</ul>
+<p><code>int max(int num1, int num2);</code></p>
+<ul>
+<li>在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明:  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int max(int, int);</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>// 一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。   </p>
+</li>
+<li><p>调用函数<br>//一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。 </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数声明</span><br><span class="line">int max(int num1, int num2);</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int a &#x3D; 100;</span><br><span class="line">   int b &#x3D; 200;</span><br><span class="line">   int ret;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 调用函数来获取最大值</span><br><span class="line">   ret &#x3D; max(a, b);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Max value is : &quot; &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>// 结果   </p>
+<p><code>Max value is ：200</code></p>
+<hr>
+<h3 id="Lambda-函数"><a href="#Lambda-函数" class="headerlink" title="Lambda 函数"></a>Lambda 函数</h3><hr>
+<ul>
+<li>定义一个可以输出字符串的lambda表达式，表达式一般都是从方括号[]开始，然后结束于花括号{}，花括号里面就像定义函数那样，包含了lamdba表达式体:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 定义简单的lambda表达式</span><br><span class="line">auto basicLambda &#x3D; [] &#123; cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 调用</span><br><span class="line">basicLambda();</span><br><span class="line">&#x2F;&#x2F; 输出：Hello, world!</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>如果需要参数，那么就要像函数那样，放在圆括号里面，如果有返回值，返回类型要放在-&gt;后面，即拖尾返回类型，当然你也可以忽略返回类型，lambda会帮你自动推断出返回类型   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 指明返回类型</span><br><span class="line">auto add &#x3D; [](int a, int b) -&gt; int &#123; return a + b; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 自动推断返回类型</span><br><span class="line">auto multiply &#x3D; [](int a, int b) &#123; return a * b; &#125;;</span><br><span class="line">int sum &#x3D; add(2, 5);   &#x2F;&#x2F; 输出：7</span><br><span class="line">int product &#x3D; multiply(2, 5);  &#x2F;&#x2F; 输出：10</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>java</category>
+        <category>c++</category>
       </categories>
       <tags>
-        <tag>构造方法</tag>
+        <tag>函数</tag>
       </tags>
   </entry>
   <entry>
@@ -156,137 +247,46 @@
 </code></pre>]]></content>
   </entry>
   <entry>
-    <title>函数基础</title>
-    <url>/2020/07/28/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>
-<h3 id="函数基础回顾"><a href="#函数基础回顾" class="headerlink" title="函数基础回顾"></a>函数基础回顾</h3><hr>
-<h4 id="例"><a href="#例" class="headerlink" title="例:"></a>例:</h4><ul>
-<li>定义函数</li>
-</ul>
+    <title>java-简谈构造方法</title>
+    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
+<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
 <hr>
-<ul>
-<li>以下是 max() 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：</li>
-<li>函数定义提供了函数的实际主体   </li>
-<li></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line"> </span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<ul>
-<li>函数声明<br>：函数声明告诉编译器函数的名称、返回类型和参数</li>
-</ul>
-<p><code>int max(int num1, int num2);</code></p>
-<ul>
-<li>在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明:  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int max(int, int);</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li><p>// 一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。   </p>
-</li>
-<li><p>调用函数<br>//一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。 </p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数声明</span><br><span class="line">int max(int num1, int num2);</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int a &#x3D; 100;</span><br><span class="line">   int b &#x3D; 200;</span><br><span class="line">   int ret;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 调用函数来获取最大值</span><br><span class="line">   ret &#x3D; max(a, b);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Max value is : &quot; &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>// 结果   </p>
-<p><code>Max value is ：200</code></p>
-<hr>
-<h3 id="Lambda-函数"><a href="#Lambda-函数" class="headerlink" title="Lambda 函数"></a>Lambda 函数</h3><hr>
-<ul>
-<li>定义一个可以输出字符串的lambda表达式，表达式一般都是从方括号[]开始，然后结束于花括号{}，花括号里面就像定义函数那样，包含了lamdba表达式体:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 定义简单的lambda表达式</span><br><span class="line">auto basicLambda &#x3D; [] &#123; cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 调用</span><br><span class="line">basicLambda();</span><br><span class="line">&#x2F;&#x2F; 输出：Hello, world!</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>如果需要参数，那么就要像函数那样，放在圆括号里面，如果有返回值，返回类型要放在-&gt;后面，即拖尾返回类型，当然你也可以忽略返回类型，lambda会帮你自动推断出返回类型   </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 指明返回类型</span><br><span class="line">auto add &#x3D; [](int a, int b) -&gt; int &#123; return a + b; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 自动推断返回类型</span><br><span class="line">auto multiply &#x3D; [](int a, int b) &#123; return a * b; &#125;;</span><br><span class="line">int sum &#x3D; add(2, 5);   &#x2F;&#x2F; 输出：7</span><br><span class="line">int product &#x3D; multiply(2, 5);  &#x2F;&#x2F; 输出：10</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java-方法</title>
-    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>   
-<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
-<ul>
-<li>方法的使用是为了增加代码的重复利用性   </li>
-</ul>
-<ol>
-<li>方法在Java中相当于一种机制：   </li>
-</ol>
-<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
-<hr>
-<ul>
-<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>方法内不能再写方法  </li>
-<li>类体内可以定义多个方法   </li>
-</ol>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java中的参数列表</title>
-    <url>/2021/04/08/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<h4 id="关于Java中参数列表"><a href="#关于Java中参数列表" class="headerlink" title="关于Java中参数列表"></a>关于Java中参数列表</h4><a id="more"></a>
-<h2 id="2021-4-8"><a href="#2021-4-8" class="headerlink" title="2021.4.8"></a>2021.4.8</h2><hr>
-<pre><code>
-public class Demo_arrylist {
+<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
+<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
+{   
 
     public static void main(String[] args) {
-
-        Demo demo = new Demo();
-        demo.show(&quot;小米&quot;);
+        Student p1 =new Student(18,&quot;jack&quot;);
+        Student p2 =new Student(19,&quot;jack&quot;);
+        p1.printlnof();
+        p2.getAge();
+        p2.printlnof();
     }
 }
 
-    class Demo{
-        String name= &quot;华为&quot;;
-        public void  show(String name) {
-
-            System.out.println(name+ &quot; 的友商是  &quot;+ this.name );
-        }
-    }
-</code></pre><hr>
-<ul>
-<li>在    public void  show(String name) {} 中加入参数列表 string name 相当于形参，在调用show（）方法的时候 需要赋值</li>
-<li>在show（）方法中调用 demo类的成员变量 可以用this关键字 </li>
-</ul>
-<hr>
-<h5 id="自己的误解："><a href="#自己的误解：" class="headerlink" title="自己的误解："></a>自己的误解：</h5><ul>
-<li>以为参数列表只是标指 方法中运用的变量 </li>
-<li>实质上也可以看作一个对象 万物皆对象</li>
-</ul>
-<hr>
-<p>认知不停 待更新见解…….</p>
+    class Student{
+        private int age;
+        private String name;
+            public Student(int age,String name) {
+                this.age=age;
+                this.name=name;
+            }
+            public void printlnof() {
+                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
+            }
+            public void getAge() {
+                int s=10;
+                age+=s;
+            }
+    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
 ]]></content>
       <categories>
         <category>java</category>
       </categories>
       <tags>
-        <tag>参数列表</tag>
+        <tag>构造方法</tag>
       </tags>
   </entry>
 </search>
