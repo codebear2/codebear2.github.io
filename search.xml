@@ -20,130 +20,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java-方法</title>
-    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>   
-<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
-<ul>
-<li>方法的使用是为了增加代码的重复利用性   </li>
-</ul>
-<ol>
-<li>方法在Java中相当于一种机制：   </li>
-</ol>
-<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
-<hr>
-<ul>
-<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>方法内不能再写方法  </li>
-<li>类体内可以定义多个方法   </li>
-</ol>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdown-基本语法</title>
-    <url>/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>   
-<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示： "></a>效果展示： </h2><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>   </p>
-<p><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>   </p>
-<blockquote>
-<p>这是引用的内容  </p>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
-<hr>
-<hr>
-<p>添加图片的方法：<br><img src="https://s1.ax1x.com/2020/06/21/N14qQs.png" alt="元素">   </p>
-<p>添加超链接：<br><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a>   </p>
-<p>无序列表<br>语法：<br>   用 - + * 任何一种都可以   </p>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容<br>注意：- + * 跟内容之间都要有一个空格   </li>
-</ul>
-<p>有序列表<br>语法：<br>数字加点   </p>
-<ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容<br>注意：序号跟内容之间要有空格   </li>
-</ol>
-<p>代码处理：<br>语法：<br>单行代码：代码之间分别用一个反引号包起来<br> <code>代码内容</code>   </p>
-<p> 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>(<code>)
-  代码...
-  代码...
-  代码...   
-(</code>)   </p>
-<hr>
-<h2 id="语法示例："><a href="#语法示例：" class="headerlink" title="语法示例："></a>语法示例：</h2><pre><code># 这是一级标题  
-## 这是二级标题
-### 这是三级标题
-#### 这是四级标题
-##### 这是五级标题
-###### 这是六级标题
-
-**这是加粗的文字**   
-*这是倾斜的文字*   
-
-***这是斜体加粗的文字***   
-~~这是加删除线的文字~~   
-&gt;这是引用的内容  
-
-分割线
----
-----
-***
-*****   
-添加图片的方法：   
-![元素](https://s1.ax1x.com/2020/06/21/N14qQs.png)   
-
-添加超链接：  
-[简书](http://jianshu.com)   
-[百度](http://baidu.com)   
-
-无序列表   
-语法：
-   用 - + * 任何一种都可以   
-- 列表内容
-+ 列表内容
-* 列表内容   
-注意：- + * 跟内容之间都要有一个空格   
-
-有序列表   
-语法：
-数字加点   
-1. 列表内容
-2. 列表内容
-3. 列表内容   
-注意：序号跟内容之间要有空格   
-
-代码处理：   
-语法：
-单行代码：代码之间分别用一个反引号包起来   
- `代码内容`   
-
- 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行   
-(```)
-  代码...
-  代码...
-  代码...   
-(```)   
-</code></pre>]]></content>
-  </entry>
-  <entry>
     <title>java-简谈构造方法</title>
     <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
@@ -274,6 +150,37 @@ public static void main(String[] args) {
       </tags>
   </entry>
   <entry>
+    <title>java-方法</title>
+    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
+<ul>
+<li>方法的使用是为了增加代码的重复利用性   </li>
+</ul>
+<ol>
+<li>方法在Java中相当于一种机制：   </li>
+</ol>
+<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
+<hr>
+<ul>
+<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
+<li>方法内不能再写方法  </li>
+<li>类体内可以定义多个方法   </li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>函数基础</title>
     <url>/2020/07/28/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<hr>
@@ -335,6 +242,99 @@ public static void main(String[] args) {
       </tags>
   </entry>
   <entry>
+    <title>markdown-基本语法</title>
+    <url>/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示： "></a>效果展示： </h2><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>   </p>
+<p><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>   </p>
+<blockquote>
+<p>这是引用的内容  </p>
+</blockquote>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
+<hr>
+<hr>
+<p>添加图片的方法：<br><img src="https://s1.ax1x.com/2020/06/21/N14qQs.png" alt="元素">   </p>
+<p>添加超链接：<br><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a>   </p>
+<p>无序列表<br>语法：<br>   用 - + * 任何一种都可以   </p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容<br>注意：- + * 跟内容之间都要有一个空格   </li>
+</ul>
+<p>有序列表<br>语法：<br>数字加点   </p>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容<br>注意：序号跟内容之间要有空格   </li>
+</ol>
+<p>代码处理：<br>语法：<br>单行代码：代码之间分别用一个反引号包起来<br> <code>代码内容</code>   </p>
+<p> 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>(<code>)
+  代码...
+  代码...
+  代码...   
+(</code>)   </p>
+<hr>
+<h2 id="语法示例："><a href="#语法示例：" class="headerlink" title="语法示例："></a>语法示例：</h2><pre><code># 这是一级标题  
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+
+**这是加粗的文字**   
+*这是倾斜的文字*   
+
+***这是斜体加粗的文字***   
+~~这是加删除线的文字~~   
+&gt;这是引用的内容  
+
+分割线
+---
+----
+***
+*****   
+添加图片的方法：   
+![元素](https://s1.ax1x.com/2020/06/21/N14qQs.png)   
+
+添加超链接：  
+[简书](http://jianshu.com)   
+[百度](http://baidu.com)   
+
+无序列表   
+语法：
+   用 - + * 任何一种都可以   
+- 列表内容
++ 列表内容
+* 列表内容   
+注意：- + * 跟内容之间都要有一个空格   
+
+有序列表   
+语法：
+数字加点   
+1. 列表内容
+2. 列表内容
+3. 列表内容   
+注意：序号跟内容之间要有空格   
+
+代码处理：   
+语法：
+单行代码：代码之间分别用一个反引号包起来   
+ `代码内容`   
+
+ 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行   
+(```)
+  代码...
+  代码...
+  代码...   
+(```)   
+</code></pre>]]></content>
+  </entry>
+  <entry>
     <title>java中的参数列表</title>
     <url>/2021/04/08/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</url>
     <content><![CDATA[<h4 id="关于Java中参数列表"><a href="#关于Java中参数列表" class="headerlink" title="关于Java中参数列表"></a>关于Java中参数列表</h4><a id="more"></a>
@@ -374,6 +374,59 @@ public class Demo_arrylist {
       </categories>
       <tags>
         <tag>参数列表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序知识点</title>
+    <url>/2021/07/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="微信小程序先导知识点"><a href="#微信小程序先导知识点" class="headerlink" title="微信小程序先导知识点"></a>微信小程序先导知识点</h3><hr>
+<ul>
+<li><p>==什么叫做API==<br><a href="https://blog.csdn.net/weixin_42067279/article/details/87987028" target="_blank" rel="noopener">link</a></p>
+</li>
+<li><p>app.js、app.json、app.wxss  </p>
+</li>
+</ul>
+<p>关键的三个文件：.js后缀的是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件。微信小程序会读取这些文件，并生成小程序实例   </p>
+<p>==详解==   </p>
+<ol>
+<li>app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量。调用框架提供的丰富的API，如本例的同步存储及同步读取本地数据。</li>
+<li>app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。</li>
+<li>app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则。  </li>
+</ol>
+<hr>
+<p>==注意==   </p>
+<ul>
+<li>在实例程序的代码中还有2个文件夹，一个是pages,一个是utils,其中utils是放通用工具类方法的一个文件夹，pages是存放所有页面的文件夹。</li>
+</ul>
+<hr>
+<ul>
+<li><p>每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：==index.js、index.wxml、index.wxss、index.json==。.js后缀的文件是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件，.wxml后缀的文件是页面结构文件。  </p>
+</li>
+<li><p>index.wxml 是页面的结构文件：本例中使用了<view/>、<image/>、<text/>来搭建页面结构，绑定数据和交互处理函数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">  &lt;view  bindtap&#x3D;&quot;bindViewTap&quot; class&#x3D;&quot;userinfo&quot;&gt;</span><br><span class="line">    &lt;image class&#x3D;&quot;userinfo-avatar&quot; src&#x3D;&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; background-size&#x3D;&quot;cover&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;usermotto&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;user-motto&quot;&gt;&#123;&#123;motto&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>index.js 是页面的脚本文件，在这个文件中我们可以监听并处理页面的生命周期函数、获取小程序实例，声明并处理数据，响应页面交互事件等。 </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">&#x2F;&#x2F;获取应用实例</span><br><span class="line">var app &#x3D; getApp()</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    motto: &#39;Hello World&#39;,</span><br><span class="line">    userInfo: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;事件处理函数</span><br><span class="line">  bindViewTap: function() &#123;</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: &#39;..&#x2F;logs&#x2F;logs&#39;</span><br><span class="line">    &#125;) &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    console.log(&#39;onLoad&#39;)</span><br><span class="line">    var that &#x3D; this</span><br><span class="line">    &#x2F;&#x2F;调用应用实例的方法获取全局数据</span><br><span class="line">    app.getUserInfo(function(userInfo)&#123;</span><br><span class="line">      &#x2F;&#x2F;更新数据</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        userInfo:userInfo</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>index.wxss 是页面的样式表：  </li>
+<li>页面的样式表是非必要的。当有页面样式表时，页面的样式表中的样式规则会层叠覆盖 app.wxss 中的样式规则。如果不指定页面的样式表，也可以在页面的结构文件中直接使用 app.wxss 中指定的样式规则。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**index.wxss**&#x2F;</span><br><span class="line">.userinfo &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-avatar &#123;</span><br><span class="line">  width: 128rpx;</span><br><span class="line">  height: 128rpx;</span><br><span class="line">  margin: 20rpx;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-nickname &#123;</span><br><span class="line">  color: #aaa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.usermotto &#123;</span><br><span class="line">  margin-top: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>index.json 是页面的配置文件：</li>
+<li>页面的配置文件是非必要的。当有页面的配置文件时，配置项在该页面会覆盖 app.json 的 window 中相同的配置项。如果没有指定的页面配置文件，则在该页面直接使用 app.json 中的默认配置。</li>
+<li>logs 的页面结<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--logs.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container log-list&quot;&gt;</span><br><span class="line">  &lt;block wx:for-items&#x3D;&quot;&#123;&#123;logs&#125;&#125;&quot; wx:for-item&#x3D;&quot;log&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;log-item&quot;&gt;&#123;&#123;index + 1&#125;&#125;. &#123;&#123;log&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;block&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
+<li>==logs 页面使用 <block/> 控制标签来组织代码，在 <block/> 上使用 wx:for-items 绑定 logs 数据，并将 logs 数据循环展开节点==   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;logs.js</span><br><span class="line">var util &#x3D; require(&#39;..&#x2F;..&#x2F;utils&#x2F;util.js&#39;)</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    logs: []</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      logs: (wx.getStorageSync(&#39;logs&#39;) || []).map(function (log) &#123;</span><br><span class="line">        return util.formatTime(new Date(log))</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
 </search>
