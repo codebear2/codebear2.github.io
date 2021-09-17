@@ -429,4 +429,44 @@ public class Demo_arrylist {
         <tag>函数</tag>
       </tags>
   </entry>
+  <entry>
+    <title>类型转换</title>
+    <url>/2021/09/17/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><hr>
+<ul>
+<li>基本类型  </li>
+</ul>
+<p>byte short char int long float double  </p>
+<ul>
+<li>运算中，不同类型的数据先转换为同一个类型，然后再进行运算  </li>
+</ul>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">10</span>；</span><br><span class="line"><span class="keyword">byte</span> b = (<span class="keyword">byte</span>)i; <span class="comment">// 强制转换格式</span></span><br><span class="line">System.out.println(b);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意点：<ol>
+<li>不能对布尔值进行转换 </li>
+<li>不能将高精度的数值转换成低精度的数值 </li>
+<li>转换的时候可能存在溢出，或者精度的问题    </li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>自动转换 </p>
+<p>出现在 低转高 </p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> a = <span class="string">"a"</span>;</span><br><span class="line"><span class="keyword">int</span> d = a+<span class="number">1</span>;</span><br><span class="line"><span class="comment">// -&gt;   d=98</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>类型转换</tag>
+      </tags>
+  </entry>
 </search>
