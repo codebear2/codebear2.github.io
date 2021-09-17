@@ -469,4 +469,254 @@ public class Demo_arrylist {
         <tag>类型转换</tag>
       </tags>
   </entry>
+  <entry>
+    <title>冒泡排序</title>
+    <url>/2021/09/17/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>增强for循环</title>
+    <url>/2021/09/17/%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Scanner</title>
+    <url>/2021/09/17/Scanner/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h2 id="Scanner方法"><a href="#Scanner方法" class="headerlink" title="Scanner方法"></a>Scanner方法</h2><hr>
+<hr>
+<ul>
+<li><p>和用户交互的方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个扫描器对象，用于接收键盘数据</span></span><br><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断用户有没有输入字符串</span></span><br><span class="line">    <span class="keyword">if</span>(sc.hasNextIn())&#123;</span><br><span class="line">        <span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">        System.out.print(a);</span><br><span class="line">   &#125;</span><br><span class="line"><span class="comment">// 属于i/o流  使用完要关闭</span></span><br><span class="line">    sc.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>next()  不能得到带有空格的字符串</p>
+</li>
+<li><p>next Line() </p>
+<ol>
+<li>以Enter为结束符：也就是说方法返回的是输入回车之前的所有字符</li>
+<li>可以获取空白</li>
+</ol>
+</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Scanner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>异常</title>
+    <url>/2021/09/17/%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>变量，作用域</title>
+    <url>/2021/09/17/%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B8%B8%E9%87%8F%EF%BC%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+
+<h2 id="变量-常量-作用域"><a href="#变量-常量-作用域" class="headerlink" title="变量 常量 作用域"></a>变量 常量 作用域</h2><hr>
+<hr>
+<ul>
+<li>注意：<ol>
+<li>每个变量都有类型，类型可以是基本类型也可以引用类型 </li>
+<li>变量必须先声明后使用</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>变量作用域</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks = <span class="number">0</span>;  <span class="comment">// 类变量</span></span><br><span class="line">    String str = <span class="string">'hello'</span>;  <span class="comment">// 实例变量</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i = o; <span class="comment">// 局部变量</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>类变量</p>
+<p>加了static </p>
+<ol>
+<li>在类里面，且从属于类，随着类的消失而消失</li>
+</ol>
+</li>
+<li><p>常量 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>变量，作用域</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稀疏数组</title>
+    <url>/2021/09/17/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>类和对象的关系</title>
+    <url>/2021/09/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>类的概念和方法的调用</title>
+    <url>/2021/09/17/%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>自增自减符号</title>
+    <url>/2021/09/17/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E7%AC%A6%E5%8F%B7/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>抽象类</title>
+    <url>/2021/09/17/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><hr>
+<hr>
+<ul>
+<li>用 abstract 修饰的类 </li>
+<li>抽象类中可以没有抽象方法但是一定要声明为抽象类</li>
+<li>抽象类不可以用new 关键字创建对象，它是用来被子类继承的</li>
+<li>抽象方法，只有方法的声明没有方法的实现，它是用来让子类实现的</li>
+<li>子类继承抽象类，那么一定要实现抽象类的方法否则该子类就要声明为抽象类</li>
+</ul>
+<hr>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
+<li>interface  关键字</li>
+<li>继承接口用 implement</li>
+<li>接口是继承类更高标准 的约束</li>
+<li>接口可以多继承</li>
+<li>接口不是类  不可以实例化 </li>
+<li>作用：<ol>
+<li>一个约束</li>
+<li>可以定义一些方法让不同人去实现</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>抽象类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>面向对象三大特性</title>
+    <url>/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>可变参数</title>
+    <url>/2021/09/17/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><hr>
+<hr>
+<ul>
+<li><p>在方法声明中，在指定参数类型后面加一个省略号（…）</p>
+</li>
+<li><p>一个方法中只能指定一个可变参数，它必须是<strong>最后</strong>一个参数，任何普通参数必须在他之前声明</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       Demo04 demo04 = <span class="keyword">new</span> Demo04();</span><br><span class="line">        demo04.printOf(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义一个方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printOf</span><span class="params">(<span class="keyword">int</span> k，<span class="keyword">int</span>... i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;<span class="number">4</span>; j++) &#123;</span><br><span class="line">            System.out.println(i[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打印出 1，2，3，4，1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>可变参数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>方法的定义和调用</title>
+    <url>/2021/09/17/%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+
+<h3 id="方法的定义和调用简单使用"><a href="#方法的定义和调用简单使用" class="headerlink" title="方法的定义和调用简单使用"></a>方法的定义和调用简单使用</h3><hr>
+<hr>
+<ul>
+<li>简单的一个程序</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 比大小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">            result = a;</span><br><span class="line">        &#125;<span class="keyword">else</span> result =b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中方法加上了static则为类方法 在main方法中就可以直接调用</li>
+</ul>
+<hr>
+<h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><ol>
+<li>方法的名称必须相同</li>
+<li>参数列表必须不同</li>
+<li>方法的返回类型可以相同可以不同</li>
+<li>仅仅只有返回类型不同 不可   </li>
+</ol>
+<p>原理：是 通过 Java 虚拟机根据 调用的方法自行对参数个数，参数类型等逐个匹配 聪儿选择对应的方法</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法的定义和调用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组</title>
+    <url>/2021/09/17/%E9%80%92%E5%BD%92/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><hr>
+<hr>
+<ul>
+<li><p>声明  </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums;<span class="comment">// 声明一个数组</span></span><br><span class="line">nums = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];<span class="comment">// 创建一个数组</span></span><br><span class="line">nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">nums[<span class="number">1</span>] = <span class="number">2</span>;<span class="comment">// 给数组中的元素赋值</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>简化统一 :静态初始化</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums =&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;nums.length; i++)</span><br><span class="line"> &#123; </span><br><span class="line">           System.out.println(nums[i]);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接将声明和初始化放在一块：动态初始化</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">nums[<span class="number">1</span>] = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<p>小结①：</p>
+<ol>
+<li>数组也是对象，数组元素相当于成员的成员变量</li>
+<li>数组的长度是一定的</li>
+</ol>
+<hr>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><ul>
+<li>多维数组可看作为是数组的数组，比如二维数组就是一个特殊的一维数组，其每一个元素都是一个一维数组</li>
+</ul>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418750.bmp" alt=""></p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] array =&#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;array[i].length;j++)&#123;</span><br><span class="line">        System.out.println(array[i][j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><ul>
+<li><p>工具类 </p>
+</li>
+<li><p>列举几个常用的方法</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums =&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>&#125;;</span><br><span class="line">System.out.print(Ayyays.toString(nums));<span class="comment">//d</span></span><br><span class="line"><span class="comment">// [1,2,3,5,4]</span></span><br><span class="line">Ayyays.sort(nums); <span class="comment">// 升序排序</span></span><br><span class="line">System.out.print(Ayyays.toString(nums));</span><br><span class="line"><span class="comment">// [1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
 </search>
