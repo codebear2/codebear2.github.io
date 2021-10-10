@@ -628,11 +628,6 @@ public static void main(String[] args) {
       </tags>
   </entry>
   <entry>
-    <title>类的概念和方法的调用</title>
-    <url>/2021/09/17/%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>数组</title>
     <url>/2021/09/17/%E9%80%92%E5%BD%92/</url>
     <content><![CDATA[<hr>
@@ -753,6 +748,7 @@ public static void main(String[] args) {
     <url>/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<hr>
 <p>layout: w<br>title: 面向对象三大特性<br>date: 2021-09-17 14:57:04<br>tags: 面向对象<br>categories: java</p>
+<hr>
 <hr>
 <a id="more"></a>
 <h3 id="面向对象-封装"><a href="#面向对象-封装" class="headerlink" title="面向对象-封装"></a>面向对象-封装</h3><hr>
