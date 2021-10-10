@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Scanner</title>
+    <url>/2021/09/17/Scanner/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h2 id="Scanner方法"><a href="#Scanner方法" class="headerlink" title="Scanner方法"></a>Scanner方法</h2><hr>
+<hr>
+<ul>
+<li><p>和用户交互的方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个扫描器对象，用于接收键盘数据</span></span><br><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断用户有没有输入字符串</span></span><br><span class="line">    <span class="keyword">if</span>(sc.hasNextIn())&#123;</span><br><span class="line">        <span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">        System.out.print(a);</span><br><span class="line">   &#125;</span><br><span class="line"><span class="comment">// 属于i/o流  使用完要关闭</span></span><br><span class="line">    sc.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>next()  不能得到带有空格的字符串</p>
+</li>
+<li><p>next Line() </p>
+<ol>
+<li>以Enter为结束符：也就是说方法返回的是输入回车之前的所有字符</li>
+<li>可以获取空白</li>
+</ol>
+</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Scanner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java中的参数列表</title>
+    <url>/2021/04/08/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<h4 id="关于Java中参数列表"><a href="#关于Java中参数列表" class="headerlink" title="关于Java中参数列表"></a>关于Java中参数列表</h4><a id="more"></a>
+<h2 id="2021-4-8"><a href="#2021-4-8" class="headerlink" title="2021.4.8"></a>2021.4.8</h2><hr>
+<pre><code>
+public class Demo_arrylist {
+
+    public static void main(String[] args) {
+
+        Demo demo = new Demo();
+        demo.show(&quot;小米&quot;);
+    }
+}
+
+    class Demo{
+        String name= &quot;华为&quot;;
+        public void  show(String name) {
+
+            System.out.println(name+ &quot; 的友商是  &quot;+ this.name );
+        }
+    }
+</code></pre><hr>
+<ul>
+<li>在    public void  show(String name) {} 中加入参数列表 string name 相当于形参，在调用show（）方法的时候 需要赋值</li>
+<li>在show（）方法中调用 demo类的成员变量 可以用this关键字 </li>
+</ul>
+<hr>
+<h5 id="自己的误解："><a href="#自己的误解：" class="headerlink" title="自己的误解："></a>自己的误解：</h5><ul>
+<li>以为参数列表只是标指 方法中运用的变量 </li>
+<li>实质上也可以看作一个对象 万物皆对象</li>
+</ul>
+<hr>
+<p>认知不停 待更新见解…….</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>参数列表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/06/19/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -20,34 +91,309 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java-方法</title>
-    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>   
-<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
-<ul>
-<li>方法的使用是为了增加代码的重复利用性   </li>
-</ul>
-<ol>
-<li>方法在Java中相当于一种机制：   </li>
-</ol>
-<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
+    <title>java-简谈构造方法</title>
+    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
+<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
 <hr>
-<ul>
-<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>方法内不能再写方法  </li>
-<li>类体内可以定义多个方法   </li>
-</ol>
+<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
+<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
+{   
+
+    public static void main(String[] args) {
+        Student p1 =new Student(18,&quot;jack&quot;);
+        Student p2 =new Student(19,&quot;jack&quot;);
+        p1.printlnof();
+        p2.getAge();
+        p2.printlnof();
+    }
+}
+
+    class Student{
+        private int age;
+        private String name;
+            public Student(int age,String name) {
+                this.age=age;
+                this.name=name;
+            }
+            public void printlnof() {
+                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
+            }
+            public void getAge() {
+                int s=10;
+                age+=s;
+            }
+    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
 ]]></content>
       <categories>
         <category>java</category>
       </categories>
       <tags>
-        <tag>方法</tag>
+        <tag>构造方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>变量，作用域</title>
+    <url>/2021/09/17/%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B8%B8%E9%87%8F%EF%BC%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+
+<h2 id="变量-常量-作用域"><a href="#变量-常量-作用域" class="headerlink" title="变量 常量 作用域"></a>变量 常量 作用域</h2><hr>
+<hr>
+<ul>
+<li>注意：<ol>
+<li>每个变量都有类型，类型可以是基本类型也可以引用类型 </li>
+<li>变量必须先声明后使用</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>变量作用域</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks = <span class="number">0</span>;  <span class="comment">// 类变量</span></span><br><span class="line">    String str = <span class="string">'hello'</span>;  <span class="comment">// 实例变量</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i = o; <span class="comment">// 局部变量</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>类变量</p>
+<p>加了static </p>
+<ol>
+<li>在类里面，且从属于类，随着类的消失而消失</li>
+</ol>
+</li>
+<li><p>常量 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>变量，作用域</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>函数基础</title>
+    <url>/2020/07/28/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="函数基础回顾"><a href="#函数基础回顾" class="headerlink" title="函数基础回顾"></a>函数基础回顾</h3><hr>
+<h4 id="例"><a href="#例" class="headerlink" title="例:"></a>例:</h4><ul>
+<li>定义函数</li>
+</ul>
+<hr>
+<ul>
+<li>以下是 max() 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：</li>
+<li>函数定义提供了函数的实际主体   </li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line"> </span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<ul>
+<li>函数声明<br>：函数声明告诉编译器函数的名称、返回类型和参数</li>
+</ul>
+<p><code>int max(int num1, int num2);</code></p>
+<ul>
+<li>在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明:  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int max(int, int);</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>// 一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。   </p>
+</li>
+<li><p>调用函数<br>//一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。 </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数声明</span><br><span class="line">int max(int num1, int num2);</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int a &#x3D; 100;</span><br><span class="line">   int b &#x3D; 200;</span><br><span class="line">   int ret;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 调用函数来获取最大值</span><br><span class="line">   ret &#x3D; max(a, b);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Max value is : &quot; &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>// 结果   </p>
+<p><code>Max value is ：200</code></p>
+<hr>
+<h3 id="Lambda-函数"><a href="#Lambda-函数" class="headerlink" title="Lambda 函数"></a>Lambda 函数</h3><hr>
+<ul>
+<li>定义一个可以输出字符串的lambda表达式，表达式一般都是从方括号[]开始，然后结束于花括号{}，花括号里面就像定义函数那样，包含了lamdba表达式体:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 定义简单的lambda表达式</span><br><span class="line">auto basicLambda &#x3D; [] &#123; cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 调用</span><br><span class="line">basicLambda();</span><br><span class="line">&#x2F;&#x2F; 输出：Hello, world!</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>如果需要参数，那么就要像函数那样，放在圆括号里面，如果有返回值，返回类型要放在-&gt;后面，即拖尾返回类型，当然你也可以忽略返回类型，lambda会帮你自动推断出返回类型   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 指明返回类型</span><br><span class="line">auto add &#x3D; [](int a, int b) -&gt; int &#123; return a + b; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 自动推断返回类型</span><br><span class="line">auto multiply &#x3D; [](int a, int b) &#123; return a * b; &#125;;</span><br><span class="line">int sum &#x3D; add(2, 5);   &#x2F;&#x2F; 输出：7</span><br><span class="line">int product &#x3D; multiply(2, 5);  &#x2F;&#x2F; 输出：10</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java中的匿名函数</title>
+    <url>/2021/04/11/java%E4%B8%AD%E7%9A%84%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="匿名函数的注意点及使用"><a href="#匿名函数的注意点及使用" class="headerlink" title="匿名函数的注意点及使用"></a>匿名函数的注意点及使用</h3><hr>
+<p>*例  简单概念</p>
+<pre><code>public class Demo_Anonymous {
+
+    public static void main(String[] args) {
+        Person one = new Person();
+        one.name = &quot;张三&quot;;
+        one.showName();
+
+        System.out.println(&quot;=====================&quot;);
+
+        new Person().name=&quot;lisa&quot;;
+        new Person().showName();  // 匿名对象只能调用一次  第二次使用则为创新了一个新的匿名对象
+    }
+
+}
+    class Person{
+        String name;
+
+        public void showName() {
+            System.out.println(name);
+        }
+
+    }</code></pre><hr>
+<ul>
+<li>匿名对象作为方法的参数列表</li>
+</ul>
+<pre><code>import java.util.Scanner;
+
+public class Demo_06 {
+public static void main(String[] args) {
+
+
+     // 匿名对象的方法
+//    int num = new Scanner(System.in).nextInt();
+//    
+//    System.out.println(&quot;输出的数字： &quot;+ num);
+
+    // 匿名对象 作为方法的参数列表
+    Anonymous_ways(new Scanner(System.in));
+}
+
+    public static void Anonymous_ways(Scanner sc) {
+        int num = sc.nextInt();
+        System.out.println(&quot;输出的数字是： &quot; + num);
+    }
+}</code></pre><hr>
+<ul>
+<li>匿名方法作为 方法的返回值 </li>
+</ul>
+<pre><code>
+import java.util.Scanner;
+
+public class Deom {
+public static void main(String[] args) {
+    // 匿名对象作为方法的返回值
+
+
+    Scanner  sc = methodReturn();
+    int num = sc.nextInt();
+    System.out.println(&quot;输出的数是： &quot; + num);
+
+    //System.out.println(sc.nextInt());     也可
+
+
+
+}
+    public static Scanner methodReturn() {
+        return new Scanner(System.in);
+
+    }
+
+}
+
+</code></pre>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>匿名函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>可变参数</title>
+    <url>/2021/09/17/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><hr>
+<hr>
+<ul>
+<li><p>在方法声明中，在指定参数类型后面加一个省略号（…）</p>
+</li>
+<li><p>一个方法中只能指定一个可变参数，它必须是<strong>最后</strong>一个参数，任何普通参数必须在他之前声明</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       Demo04 demo04 = <span class="keyword">new</span> Demo04();</span><br><span class="line">        demo04.printOf(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义一个方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printOf</span><span class="params">(<span class="keyword">int</span> k，<span class="keyword">int</span>... i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;<span class="number">4</span>; j++) &#123;</span><br><span class="line">            System.out.println(i[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打印出 1，2，3，4，1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>可变参数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序知识点</title>
+    <url>/2021/07/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="微信小程序先导知识点"><a href="#微信小程序先导知识点" class="headerlink" title="微信小程序先导知识点"></a>微信小程序先导知识点</h3><hr>
+<ul>
+<li><p>==什么叫做API==<br><a href="https://blog.csdn.net/weixin_42067279/article/details/87987028" target="_blank" rel="noopener">link</a></p>
+</li>
+<li><p>app.js、app.json、app.wxss  </p>
+</li>
+</ul>
+<p>关键的三个文件：.js后缀的是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件。微信小程序会读取这些文件，并生成小程序实例   </p>
+<p>==详解==   </p>
+<ol>
+<li>app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量。调用框架提供的丰富的API，如本例的同步存储及同步读取本地数据。</li>
+<li>app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。</li>
+<li>app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则。  </li>
+</ol>
+<hr>
+<p>==注意==   </p>
+<ul>
+<li>在实例程序的代码中还有2个文件夹，一个是pages,一个是utils,其中utils是放通用工具类方法的一个文件夹，pages是存放所有页面的文件夹。</li>
+</ul>
+<hr>
+<ul>
+<li><p>每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：==index.js、index.wxml、index.wxss、index.json==。.js后缀的文件是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件，.wxml后缀的文件是页面结构文件。  </p>
+</li>
+<li><p>index.wxml 是页面的结构文件：本例中使用了<view/>、<image/>、<text/>来搭建页面结构，绑定数据和交互处理函数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">  &lt;view  bindtap&#x3D;&quot;bindViewTap&quot; class&#x3D;&quot;userinfo&quot;&gt;</span><br><span class="line">    &lt;image class&#x3D;&quot;userinfo-avatar&quot; src&#x3D;&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; background-size&#x3D;&quot;cover&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;usermotto&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;user-motto&quot;&gt;&#123;&#123;motto&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>index.js 是页面的脚本文件，在这个文件中我们可以监听并处理页面的生命周期函数、获取小程序实例，声明并处理数据，响应页面交互事件等。 </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">&#x2F;&#x2F;获取应用实例</span><br><span class="line">var app &#x3D; getApp()</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    motto: &#39;Hello World&#39;,</span><br><span class="line">    userInfo: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;事件处理函数</span><br><span class="line">  bindViewTap: function() &#123;</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: &#39;..&#x2F;logs&#x2F;logs&#39;</span><br><span class="line">    &#125;) &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    console.log(&#39;onLoad&#39;)</span><br><span class="line">    var that &#x3D; this</span><br><span class="line">    &#x2F;&#x2F;调用应用实例的方法获取全局数据</span><br><span class="line">    app.getUserInfo(function(userInfo)&#123;</span><br><span class="line">      &#x2F;&#x2F;更新数据</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        userInfo:userInfo</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>index.wxss 是页面的样式表：  </li>
+<li>页面的样式表是非必要的。当有页面样式表时，页面的样式表中的样式规则会层叠覆盖 app.wxss 中的样式规则。如果不指定页面的样式表，也可以在页面的结构文件中直接使用 app.wxss 中指定的样式规则。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**index.wxss**&#x2F;</span><br><span class="line">.userinfo &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-avatar &#123;</span><br><span class="line">  width: 128rpx;</span><br><span class="line">  height: 128rpx;</span><br><span class="line">  margin: 20rpx;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-nickname &#123;</span><br><span class="line">  color: #aaa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.usermotto &#123;</span><br><span class="line">  margin-top: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>index.json 是页面的配置文件：</li>
+<li>页面的配置文件是非必要的。当有页面的配置文件时，配置项在该页面会覆盖 app.json 的 window 中相同的配置项。如果没有指定的页面配置文件，则在该页面直接使用 app.json 中的默认配置。</li>
+<li>logs 的页面结<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--logs.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container log-list&quot;&gt;</span><br><span class="line">  &lt;block wx:for-items&#x3D;&quot;&#123;&#123;logs&#125;&#125;&quot; wx:for-item&#x3D;&quot;log&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;log-item&quot;&gt;&#123;&#123;index + 1&#125;&#125;. &#123;&#123;log&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;block&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
+<li>==logs 页面使用 <block/> 控制标签来组织代码，在 <block/> 上使用 wx:for-items 绑定 logs 数据，并将 logs 数据循环展开节点==   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;logs.js</span><br><span class="line">var util &#x3D; require(&#39;..&#x2F;..&#x2F;utils&#x2F;util.js&#39;)</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    logs: []</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      logs: (wx.getStorageSync(&#39;logs&#39;) || []).map(function (log) &#123;</span><br><span class="line">        return util.formatTime(new Date(log))</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -144,289 +490,101 @@
 </code></pre>]]></content>
   </entry>
   <entry>
-    <title>java-简谈构造方法</title>
-    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
-<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
-<hr>
-<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
-<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
-{   
-
-    public static void main(String[] args) {
-        Student p1 =new Student(18,&quot;jack&quot;);
-        Student p2 =new Student(19,&quot;jack&quot;);
-        p1.printlnof();
-        p2.getAge();
-        p2.printlnof();
-    }
-}
-
-    class Student{
-        private int age;
-        private String name;
-            public Student(int age,String name) {
-                this.age=age;
-                this.name=name;
-            }
-            public void printlnof() {
-                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
-            }
-            public void getAge() {
-                int s=10;
-                age+=s;
-            }
-    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>构造方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java中的匿名函数</title>
-    <url>/2021/04/11/java%E4%B8%AD%E7%9A%84%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <title>抽象类</title>
+    <url>/2021/09/17/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
     <content><![CDATA[<hr>
 <a id="more"></a>
-<h3 id="匿名函数的注意点及使用"><a href="#匿名函数的注意点及使用" class="headerlink" title="匿名函数的注意点及使用"></a>匿名函数的注意点及使用</h3><hr>
-<p>*例  简单概念</p>
-<pre><code>public class Demo_Anonymous {
-
-    public static void main(String[] args) {
-        Person one = new Person();
-        one.name = &quot;张三&quot;;
-        one.showName();
-
-        System.out.println(&quot;=====================&quot;);
-
-        new Person().name=&quot;lisa&quot;;
-        new Person().showName();  // 匿名对象只能调用一次  第二次使用则为创新了一个新的匿名对象
-    }
-
-}
-    class Person{
-        String name;
-
-        public void showName() {
-            System.out.println(name);
-        }
-
-    }</code></pre><hr>
+<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><hr>
+<hr>
 <ul>
-<li>匿名对象作为方法的参数列表</li>
-</ul>
-<pre><code>import java.util.Scanner;
-
-public class Demo_06 {
-public static void main(String[] args) {
-
-
-     // 匿名对象的方法
-//    int num = new Scanner(System.in).nextInt();
-//    
-//    System.out.println(&quot;输出的数字： &quot;+ num);
-
-    // 匿名对象 作为方法的参数列表
-    Anonymous_ways(new Scanner(System.in));
-}
-
-    public static void Anonymous_ways(Scanner sc) {
-        int num = sc.nextInt();
-        System.out.println(&quot;输出的数字是： &quot; + num);
-    }
-}</code></pre><hr>
-<ul>
-<li>匿名方法作为 方法的返回值 </li>
-</ul>
-<pre><code>
-import java.util.Scanner;
-
-public class Deom {
-public static void main(String[] args) {
-    // 匿名对象作为方法的返回值
-
-
-    Scanner  sc = methodReturn();
-    int num = sc.nextInt();
-    System.out.println(&quot;输出的数是： &quot; + num);
-
-    //System.out.println(sc.nextInt());     也可
-
-
-
-}
-    public static Scanner methodReturn() {
-        return new Scanner(System.in);
-
-    }
-
-}
-
-</code></pre>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>匿名函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java中的参数列表</title>
-    <url>/2021/04/08/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<h4 id="关于Java中参数列表"><a href="#关于Java中参数列表" class="headerlink" title="关于Java中参数列表"></a>关于Java中参数列表</h4><a id="more"></a>
-<h2 id="2021-4-8"><a href="#2021-4-8" class="headerlink" title="2021.4.8"></a>2021.4.8</h2><hr>
-<pre><code>
-public class Demo_arrylist {
-
-    public static void main(String[] args) {
-
-        Demo demo = new Demo();
-        demo.show(&quot;小米&quot;);
-    }
-}
-
-    class Demo{
-        String name= &quot;华为&quot;;
-        public void  show(String name) {
-
-            System.out.println(name+ &quot; 的友商是  &quot;+ this.name );
-        }
-    }
-</code></pre><hr>
-<ul>
-<li>在    public void  show(String name) {} 中加入参数列表 string name 相当于形参，在调用show（）方法的时候 需要赋值</li>
-<li>在show（）方法中调用 demo类的成员变量 可以用this关键字 </li>
+<li>用 abstract 修饰的类 </li>
+<li>抽象类中可以没有抽象方法但是一定要声明为抽象类</li>
+<li>抽象类不可以用new 关键字创建对象，它是用来被子类继承的</li>
+<li>抽象方法，只有方法的声明没有方法的实现，它是用来让子类实现的</li>
+<li>子类继承抽象类，那么一定要实现抽象类的方法否则该子类就要声明为抽象类</li>
 </ul>
 <hr>
-<h5 id="自己的误解："><a href="#自己的误解：" class="headerlink" title="自己的误解："></a>自己的误解：</h5><ul>
-<li>以为参数列表只是标指 方法中运用的变量 </li>
-<li>实质上也可以看作一个对象 万物皆对象</li>
-</ul>
-<hr>
-<p>认知不停 待更新见解…….</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>参数列表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序知识点</title>
-    <url>/2021/07/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>
-<h3 id="微信小程序先导知识点"><a href="#微信小程序先导知识点" class="headerlink" title="微信小程序先导知识点"></a>微信小程序先导知识点</h3><hr>
-<ul>
-<li><p>==什么叫做API==<br><a href="https://blog.csdn.net/weixin_42067279/article/details/87987028" target="_blank" rel="noopener">link</a></p>
-</li>
-<li><p>app.js、app.json、app.wxss  </p>
-</li>
-</ul>
-<p>关键的三个文件：.js后缀的是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件。微信小程序会读取这些文件，并生成小程序实例   </p>
-<p>==详解==   </p>
-<ol>
-<li>app.js是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量。调用框架提供的丰富的API，如本例的同步存储及同步读取本地数据。</li>
-<li>app.json 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。</li>
-<li>app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则。  </li>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
+<li>interface  关键字</li>
+<li>继承接口用 implement</li>
+<li>接口是继承类更高标准 的约束</li>
+<li>接口可以多继承</li>
+<li>接口不是类  不可以实例化 </li>
+<li>作用：<ol>
+<li>一个约束</li>
+<li>可以定义一些方法让不同人去实现</li>
 </ol>
-<hr>
-<p>==注意==   </p>
-<ul>
-<li>在实例程序的代码中还有2个文件夹，一个是pages,一个是utils,其中utils是放通用工具类方法的一个文件夹，pages是存放所有页面的文件夹。</li>
-</ul>
-<hr>
-<ul>
-<li><p>每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：==index.js、index.wxml、index.wxss、index.json==。.js后缀的文件是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件，.wxml后缀的文件是页面结构文件。  </p>
-</li>
-<li><p>index.wxml 是页面的结构文件：本例中使用了<view/>、<image/>、<text/>来搭建页面结构，绑定数据和交互处理函数。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--index.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">  &lt;view  bindtap&#x3D;&quot;bindViewTap&quot; class&#x3D;&quot;userinfo&quot;&gt;</span><br><span class="line">    &lt;image class&#x3D;&quot;userinfo-avatar&quot; src&#x3D;&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; background-size&#x3D;&quot;cover&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;usermotto&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;user-motto&quot;&gt;&#123;&#123;motto&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>index.js 是页面的脚本文件，在这个文件中我们可以监听并处理页面的生命周期函数、获取小程序实例，声明并处理数据，响应页面交互事件等。 </p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">&#x2F;&#x2F;获取应用实例</span><br><span class="line">var app &#x3D; getApp()</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    motto: &#39;Hello World&#39;,</span><br><span class="line">    userInfo: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;事件处理函数</span><br><span class="line">  bindViewTap: function() &#123;</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: &#39;..&#x2F;logs&#x2F;logs&#39;</span><br><span class="line">    &#125;) &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    console.log(&#39;onLoad&#39;)</span><br><span class="line">    var that &#x3D; this</span><br><span class="line">    &#x2F;&#x2F;调用应用实例的方法获取全局数据</span><br><span class="line">    app.getUserInfo(function(userInfo)&#123;</span><br><span class="line">      &#x2F;&#x2F;更新数据</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        userInfo:userInfo</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>index.wxss 是页面的样式表：  </li>
-<li>页面的样式表是非必要的。当有页面样式表时，页面的样式表中的样式规则会层叠覆盖 app.wxss 中的样式规则。如果不指定页面的样式表，也可以在页面的结构文件中直接使用 app.wxss 中指定的样式规则。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**index.wxss**&#x2F;</span><br><span class="line">.userinfo &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-avatar &#123;</span><br><span class="line">  width: 128rpx;</span><br><span class="line">  height: 128rpx;</span><br><span class="line">  margin: 20rpx;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-nickname &#123;</span><br><span class="line">  color: #aaa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.usermotto &#123;</span><br><span class="line">  margin-top: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>index.json 是页面的配置文件：</li>
-<li>页面的配置文件是非必要的。当有页面的配置文件时，配置项在该页面会覆盖 app.json 的 window 中相同的配置项。如果没有指定的页面配置文件，则在该页面直接使用 app.json 中的默认配置。</li>
-<li>logs 的页面结<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--logs.wxml--&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;container log-list&quot;&gt;</span><br><span class="line">  &lt;block wx:for-items&#x3D;&quot;&#123;&#123;logs&#125;&#125;&quot; wx:for-item&#x3D;&quot;log&quot;&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;log-item&quot;&gt;&#123;&#123;index + 1&#125;&#125;. &#123;&#123;log&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;block&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure></li>
-<li>==logs 页面使用 <block/> 控制标签来组织代码，在 <block/> 上使用 wx:for-items 绑定 logs 数据，并将 logs 数据循环展开节点==   </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;logs.js</span><br><span class="line">var util &#x3D; require(&#39;..&#x2F;..&#x2F;utils&#x2F;util.js&#39;)</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    logs: []</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      logs: (wx.getStorageSync(&#39;logs&#39;) || []).map(function (log) &#123;</span><br><span class="line">        return util.formatTime(new Date(log))</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+]]></content>
       <categories>
-        <category>微信小程序</category>
+        <category>java</category>
       </categories>
       <tags>
-        <tag>微信小程序</tag>
+        <tag>抽象类</tag>
       </tags>
   </entry>
   <entry>
-    <title>函数基础</title>
-    <url>/2020/07/28/%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
+    <title>方法的定义和调用</title>
+    <url>/2021/09/17/%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/</url>
     <content><![CDATA[<hr>
-<a id="more"></a>
-<h3 id="函数基础回顾"><a href="#函数基础回顾" class="headerlink" title="函数基础回顾"></a>函数基础回顾</h3><hr>
-<h4 id="例"><a href="#例" class="headerlink" title="例:"></a>例:</h4><ul>
-<li>定义函数</li>
-</ul>
+<a id="more"></a>  
+
+<h3 id="方法的定义和调用简单使用"><a href="#方法的定义和调用简单使用" class="headerlink" title="方法的定义和调用简单使用"></a>方法的定义和调用简单使用</h3><hr>
 <hr>
 <ul>
-<li>以下是 max() 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：</li>
-<li>函数定义提供了函数的实际主体   </li>
-<li></li>
+<li>简单的一个程序</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line"> </span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 比大小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">            result = a;</span><br><span class="line">        &#125;<span class="keyword">else</span> result =b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<ul>
+<li>其中方法加上了static则为类方法 在main方法中就可以直接调用</li>
+</ul>
 <hr>
-<ul>
-<li>函数声明<br>：函数声明告诉编译器函数的名称、返回类型和参数</li>
-</ul>
-<p><code>int max(int num1, int num2);</code></p>
-<ul>
-<li>在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明:  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int max(int, int);</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li><p>// 一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。   </p>
-</li>
-<li><p>调用函数<br>//一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。 </p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数声明</span><br><span class="line">int max(int num1, int num2);</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int a &#x3D; 100;</span><br><span class="line">   int b &#x3D; 200;</span><br><span class="line">   int ret;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 调用函数来获取最大值</span><br><span class="line">   ret &#x3D; max(a, b);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Max value is : &quot; &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 函数返回两个数中较大的那个数</span><br><span class="line">int max(int num1, int num2) </span><br><span class="line">&#123;</span><br><span class="line">   &#x2F;&#x2F; 局部变量声明</span><br><span class="line">   int result;</span><br><span class="line"> </span><br><span class="line">   if (num1 &gt; num2)</span><br><span class="line">      result &#x3D; num1;</span><br><span class="line">   else</span><br><span class="line">      result &#x3D; num2;</span><br><span class="line"> </span><br><span class="line">   return result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>// 结果   </p>
-<p><code>Max value is ：200</code></p>
-<hr>
-<h3 id="Lambda-函数"><a href="#Lambda-函数" class="headerlink" title="Lambda 函数"></a>Lambda 函数</h3><hr>
-<ul>
-<li>定义一个可以输出字符串的lambda表达式，表达式一般都是从方括号[]开始，然后结束于花括号{}，花括号里面就像定义函数那样，包含了lamdba表达式体:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 定义简单的lambda表达式</span><br><span class="line">auto basicLambda &#x3D; [] &#123; cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 调用</span><br><span class="line">basicLambda();</span><br><span class="line">&#x2F;&#x2F; 输出：Hello, world!</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>如果需要参数，那么就要像函数那样，放在圆括号里面，如果有返回值，返回类型要放在-&gt;后面，即拖尾返回类型，当然你也可以忽略返回类型，lambda会帮你自动推断出返回类型   </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 指明返回类型</span><br><span class="line">auto add &#x3D; [](int a, int b) -&gt; int &#123; return a + b; &#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 自动推断返回类型</span><br><span class="line">auto multiply &#x3D; [](int a, int b) &#123; return a * b; &#125;;</span><br><span class="line">int sum &#x3D; add(2, 5);   &#x2F;&#x2F; 输出：7</span><br><span class="line">int product &#x3D; multiply(2, 5);  &#x2F;&#x2F; 输出：10</span><br></pre></td></tr></table></figure>
-
+<h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><ol>
+<li>方法的名称必须相同</li>
+<li>参数列表必须不同</li>
+<li>方法的返回类型可以相同可以不同</li>
+<li>仅仅只有返回类型不同 不可   </li>
+</ol>
+<p>原理：是 通过 Java 虚拟机根据 调用的方法自行对参数个数，参数类型等逐个匹配 聪儿选择对应的方法</p>
 ]]></content>
       <categories>
-        <category>c++</category>
+        <category>java</category>
       </categories>
       <tags>
-        <tag>函数</tag>
+        <tag>方法的定义和调用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java-方法</title>
+    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
+<ul>
+<li>方法的使用是为了增加代码的重复利用性   </li>
+</ul>
+<ol>
+<li>方法在Java中相当于一种机制：   </li>
+</ol>
+<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
+<hr>
+<ul>
+<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
+<li>方法内不能再写方法  </li>
+<li>类体内可以定义多个方法   </li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法</tag>
       </tags>
   </entry>
   <entry>
@@ -470,202 +628,9 @@ public class Demo_arrylist {
       </tags>
   </entry>
   <entry>
-    <title>冒泡排序</title>
-    <url>/2021/09/17/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>增强for循环</title>
-    <url>/2021/09/17/%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Scanner</title>
-    <url>/2021/09/17/Scanner/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>
-<h2 id="Scanner方法"><a href="#Scanner方法" class="headerlink" title="Scanner方法"></a>Scanner方法</h2><hr>
-<hr>
-<ul>
-<li><p>和用户交互的方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个扫描器对象，用于接收键盘数据</span></span><br><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断用户有没有输入字符串</span></span><br><span class="line">    <span class="keyword">if</span>(sc.hasNextIn())&#123;</span><br><span class="line">        <span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">        System.out.print(a);</span><br><span class="line">   &#125;</span><br><span class="line"><span class="comment">// 属于i/o流  使用完要关闭</span></span><br><span class="line">    sc.close();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>next()  不能得到带有空格的字符串</p>
-</li>
-<li><p>next Line() </p>
-<ol>
-<li>以Enter为结束符：也就是说方法返回的是输入回车之前的所有字符</li>
-<li>可以获取空白</li>
-</ol>
-</li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>Scanner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>异常</title>
-    <url>/2021/09/17/%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>变量，作用域</title>
-    <url>/2021/09/17/%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B8%B8%E9%87%8F%EF%BC%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>  
-
-<h2 id="变量-常量-作用域"><a href="#变量-常量-作用域" class="headerlink" title="变量 常量 作用域"></a>变量 常量 作用域</h2><hr>
-<hr>
-<ul>
-<li>注意：<ol>
-<li>每个变量都有类型，类型可以是基本类型也可以引用类型 </li>
-<li>变量必须先声明后使用</li>
-</ol>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>变量作用域</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks = <span class="number">0</span>;  <span class="comment">// 类变量</span></span><br><span class="line">    String str = <span class="string">'hello'</span>;  <span class="comment">// 实例变量</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i = o; <span class="comment">// 局部变量</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>类变量</p>
-<p>加了static </p>
-<ol>
-<li>在类里面，且从属于类，随着类的消失而消失</li>
-</ol>
-</li>
-<li><p>常量 </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>变量，作用域</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稀疏数组</title>
-    <url>/2021/09/17/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>类和对象的关系</title>
-    <url>/2021/09/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>类的概念和方法的调用</title>
     <url>/2021/09/17/%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>自增自减符号</title>
-    <url>/2021/09/17/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E7%AC%A6%E5%8F%B7/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>抽象类</title>
-    <url>/2021/09/17/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>
-<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><hr>
-<hr>
-<ul>
-<li>用 abstract 修饰的类 </li>
-<li>抽象类中可以没有抽象方法但是一定要声明为抽象类</li>
-<li>抽象类不可以用new 关键字创建对象，它是用来被子类继承的</li>
-<li>抽象方法，只有方法的声明没有方法的实现，它是用来让子类实现的</li>
-<li>子类继承抽象类，那么一定要实现抽象类的方法否则该子类就要声明为抽象类</li>
-</ul>
-<hr>
-<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
-<li>interface  关键字</li>
-<li>继承接口用 implement</li>
-<li>接口是继承类更高标准 的约束</li>
-<li>接口可以多继承</li>
-<li>接口不是类  不可以实例化 </li>
-<li>作用：<ol>
-<li>一个约束</li>
-<li>可以定义一些方法让不同人去实现</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>抽象类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>面向对象三大特性</title>
-    <url>/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>可变参数</title>
-    <url>/2021/09/17/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>  
-<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><hr>
-<hr>
-<ul>
-<li><p>在方法声明中，在指定参数类型后面加一个省略号（…）</p>
-</li>
-<li><p>一个方法中只能指定一个可变参数，它必须是<strong>最后</strong>一个参数，任何普通参数必须在他之前声明</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       Demo04 demo04 = <span class="keyword">new</span> Demo04();</span><br><span class="line">        demo04.printOf(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义一个方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printOf</span><span class="params">(<span class="keyword">int</span> k，<span class="keyword">int</span>... i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;<span class="number">4</span>; j++) &#123;</span><br><span class="line">            System.out.println(i[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打印出 1，2，3，4，1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>可变参数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>方法的定义和调用</title>
-    <url>/2021/09/17/%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>  
-
-<h3 id="方法的定义和调用简单使用"><a href="#方法的定义和调用简单使用" class="headerlink" title="方法的定义和调用简单使用"></a>方法的定义和调用简单使用</h3><hr>
-<hr>
-<ul>
-<li>简单的一个程序</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 比大小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">            result = a;</span><br><span class="line">        &#125;<span class="keyword">else</span> result =b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>其中方法加上了static则为类方法 在main方法中就可以直接调用</li>
-</ul>
-<hr>
-<h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><ol>
-<li>方法的名称必须相同</li>
-<li>参数列表必须不同</li>
-<li>方法的返回类型可以相同可以不同</li>
-<li>仅仅只有返回类型不同 不可   </li>
-</ol>
-<p>原理：是 通过 Java 虚拟机根据 调用的方法自行对参数个数，参数类型等逐个匹配 聪儿选择对应的方法</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>方法的定义和调用</tag>
-      </tags>
   </entry>
   <entry>
     <title>数组</title>
@@ -718,5 +683,204 @@ public class Demo_arrylist {
       <tags>
         <tag>数组</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>稀疏数组</title>
+    <url>/2021/09/17/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<a id="more"></a>
+<h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><hr>
+<img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418190.bmp" style="zoom: 50%;" />
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建稀疏数组并打印</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">textDemo08</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个11*11 的数组  其中 1表示白棋 2表示黑棋</span></span><br><span class="line">        <span class="keyword">int</span>[][] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        arr[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        arr[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        arr[<span class="number">10</span>][<span class="number">10</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"棋盘"</span>);</span><br><span class="line">        printArray(arr);</span><br><span class="line">        printXArray(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    打印棋盘</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span>  <span class="title">printArray</span><span class="params">(<span class="keyword">int</span>[][] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] ints : arr) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> anInt : ints) &#123;</span><br><span class="line">                System.out.print(anInt+<span class="string">"\t"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    将棋盘转换成稀疏数组</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printXArray</span><span class="params">(<span class="keyword">int</span>[][] arr)</span></span>&#123;</span><br><span class="line"><span class="comment">//        输出有效行的个数</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//        创建一个稀疏数组对应的数组</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[][] array =<span class="keyword">new</span> <span class="keyword">int</span>[count+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">0</span>] =<span class="number">11</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">1</span>] =<span class="number">11</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">2</span>] = count;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr[i].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                    array[sum][<span class="number">0</span>]=i;</span><br><span class="line">                    array[sum][<span class="number">1</span>]=j;</span><br><span class="line">                    array[sum][<span class="number">2</span>]=arr[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printArray(array);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>稀疏数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自增自减符号</title>
+    <url>/2021/09/17/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E7%AC%A6%E5%8F%B7/</url>
+    <content><![CDATA[<a id="more"></a>
+<h4 id="自增自减符号、Math类、位运算符"><a href="#自增自减符号、Math类、位运算符" class="headerlink" title="自增自减符号、Math类、位运算符"></a>自增自减符号、Math类、位运算符</h4><hr>
+<ul>
+<li><p>简单理解</p>
+</li>
+<li><p>一个例子</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> b = a++;</span><br><span class="line"><span class="comment">// 这里隐藏了一个 a = a+1；</span></span><br><span class="line">        System.out.println(a);</span><br><span class="line">        System.out.println(b);</span><br><span class="line">        <span class="keyword">int</span> c = ++a;</span><br><span class="line">        System.out.println(c);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 3</span></span><br><span class="line"><span class="comment"> * 2</span></span><br><span class="line"><span class="comment"> * 4</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li>幂运算 使用工具类运算</li>
+<li>Math类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 2的三次方</span></span><br><span class="line"><span class="keyword">double</span> a = Math.pow(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">// -&gt; 8</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li><p>位运算</p>
+<p>A = 0011 1100</p>
+<p>B = 0000 1101</p>
+<p>A^B  = 0011 0001    // 异或  相同取0 相异取1</p>
+<p>~B = 1111 0010       // 取反 </p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>&lt;&lt;    &gt;&gt;</p>
+<ol>
+<li><p>&lt;&lt;   左移 相当于 *2  &gt;&gt; 右移  相当于 /2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418619.bmp" alt=""></p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>自增自减符号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>面向对象三大特性</title>
+    <url>/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<hr>
+<p>layout: w<br>title: 面向对象三大特性<br>date: 2021-09-17 14:57:04<br>tags: 面向对象<br>categories: java</p>
+<hr>
+<a id="more"></a>
+<h3 id="面向对象-封装"><a href="#面向对象-封装" class="headerlink" title="面向对象-封装"></a>面向对象-封装</h3><hr>
+<ul>
+<li><p>高内聚低耦合</p>
+<p>高内聚就是类的内部数据操作细节自己来完成，不允许外部干涉；低耦合：仅暴露少量的方法给外部使用</p>
+</li>
+<li><p>封装（隐藏的数据）</p>
+<p>应禁止直接访问一个对象中的数据的实际表示，而通过操作接口来访问，称之为信息隐蔽</p>
+</li>
+<li><p>封装大多数是对于 数据来说，对于方法较少使用</p>
+</li>
+</ul>
+<hr>
+<hr>
+<ul>
+<li>对于私有属性 我们需要提供可以访问这个属性的方法</li>
+<li><strong>get/set</strong></li>
+<li>通过get方法去获取这个属性 通set方法去给属性赋值</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071416738.bmp" alt=""></p>
+<hr>
+<ul>
+<li>总结 ——封装好处<ol>
+<li>提高程序的安全性</li>
+<li>隐藏代码的实现细节</li>
+<li>统一接口</li>
+<li>系统可维护性增加了</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="面向对象—继承"><a href="#面向对象—继承" class="headerlink" title="面向对象—继承"></a>面向对象—继承</h4><hr>
+<ul>
+<li>Java中继承只有单继承，没有多继承</li>
+<li><strong>extends</strong></li>
+<li>子类继承父类<ol>
+<li>子类拥有父类的全部的方法（public）</li>
+<li>私有（private）不可继承</li>
+</ol>
+</li>
+<li>Ctrl + h Idel 弹出  继承树</li>
+</ul>
+<hr>
+<h3 id="super-和-this"><a href="#super-和-this" class="headerlink" title="super 和 this"></a>super 和 this</h3><hr>
+<ul>
+<li><p>super的注意点：</p>
+<ol>
+<li>是调用父类的构造方法，必须在构造方法的第一个</li>
+<li>super 必须只能出现在子类的方法和构造函数中</li>
+<li>super和this不能同时调用构造方法  </li>
+</ol>
+</li>
+<li><p>Vs  this：</p>
+<ol>
+<li><p>代表的对象不同：</p>
+<pre><code>this 本身调用者这个对象  
+
+super ：代表父类对象的应用</code></pre></li>
+<li><p>前提：</p>
+<pre><code>this： 没有继承也可以使用
+
+ super：代表父类对象的应用</code></pre></li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><hr>
+<ul>
+<li><strong>重写</strong><ol>
+<li>需要有继承关系，子类重写父类的方法</li>
+<li>方法名必须相同</li>
+<li>参数列表必须相同</li>
+<li>修饰符：范围可以扩大： public &gt; protected &gt;default &gt; private</li>
+<li>抛出的异常 范围  可以被缩小 但不能扩大 </li>
+<li>重写 ：子类的方法和父类必要一致  方法体不同  </li>
+</ol>
+</li>
+<li>为什么需要重写<ol>
+<li>父类的功能，子类不一定需要，或者不一定满足</li>
+</ol>
+</li>
+<li>对于static 方法在继承中的使用 与 （非静态）方法的区别</li>
+<li>还涉及到      <strong>父类引用指向子类</strong></li>
+<li>父类引用指向子类 详解：<a href="https://blog.csdn.net/qq_41160264/article/details/81037752" target="_blank" rel="noopener">博客文章</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417925.bmp" alt="capture_20210828214352478"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417528.bmp" alt=""></p>
+<hr>
+<h4 id="多态详解"><a href="#多态详解" class="headerlink" title="多态详解"></a>多态详解</h4><ul>
+<li><p>同一个方法可以根据发送对象的的不同而采用多种不同的行为方式</p>
+</li>
+<li><p>多态存在的条件</p>
+<ol>
+<li>有继承关系</li>
+<li>子类重写父类方法</li>
+<li>父类引用指向子类对象</li>
+</ol>
+</li>
+<li><p>注意： 多态是方法的多态，属性没有多态性</p>
+</li>
+<li><p>不可</p>
+<ol>
+<li>static方法 属于类 它不属于实例</li>
+<li>final 常量</li>
+<li>private 方法</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="instanceof-和类型转换"><a href="#instanceof-和类型转换" class="headerlink" title="instanceof 和类型转换"></a>instanceof 和类型转换</h4><ul>
+<li><p>instanceof （类型转换）引用类型  判断一个对象是什么类型</p>
+</li>
+<li><pre><code class="java"><span class="comment">// object  person student</span>
+<span class="comment">// object  person teacher</span>
+Object object = <span class="keyword">new</span> Student(); 
+System.out.println(object <span class="keyword">instanceof</span> Student );
+<span class="comment">// ture </span>
+<span class="comment">// 主要是观看 instanceof 左右两边是否 有继承关系 </span>
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</li>
+<li><p>需要转换条件：</p>
+<ul>
+<li>父类引用指向子类的对象</li>
+</ul>
+</li>
+</ul>
+]]></content>
   </entry>
 </search>

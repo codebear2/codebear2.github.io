@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="layout: wtitle: 面向对象三大特性date: 2021-09-17 14:57:04tags: 面向对象categories: java">
+<meta property="og:type" content="article">
 <meta property="og:title" content="面向对象三大特性">
 <meta property="og:url" content="http://yoursite.com/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="搬砖的bear">
+<meta property="og:description" content="layout: wtitle: 面向对象三大特性date: 2021-09-17 14:57:04tags: 面向对象categories: java">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-17T06:57:04.000Z">
-<meta property="article:modified_time" content="2021-09-17T06:57:04.810Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071416738.bmp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417925.bmp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417528.bmp">
+<meta property="article:published_time" content="2021-09-17T06:57:04.810Z">
+<meta property="article:modified_time" content="2021-10-10T06:46:07.373Z">
 <meta property="article:author" content="zhou xiong">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071416738.bmp">
 
 <link rel="canonical" href="http://yoursite.com/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/">
 
@@ -217,6 +223,13 @@
 
               <time title="创建时间：2021-09-17 14:57:04" itemprop="dateCreated datePublished" datetime="2021-09-17T14:57:04+08:00">2021-09-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-10 14:46:07" itemprop="dateModified" datetime="2021-10-10T14:46:07+08:00">2021-10-10</time>
+              </span>
 
           
             <span id="/2021/09/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/" class="post-meta-item leancloud_visitors" data-flag-title="面向对象三大特性" title="热度">
@@ -246,7 +259,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -265,7 +278,137 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <hr>
+<p>layout: w<br>title: 面向对象三大特性<br>date: 2021-09-17 14:57:04<br>tags: 面向对象<br>categories: java</p>
+<hr>
+<a id="more"></a>
+<h3 id="面向对象-封装"><a href="#面向对象-封装" class="headerlink" title="面向对象-封装"></a>面向对象-封装</h3><hr>
+<ul>
+<li><p>高内聚低耦合</p>
+<p>高内聚就是类的内部数据操作细节自己来完成，不允许外部干涉；低耦合：仅暴露少量的方法给外部使用</p>
+</li>
+<li><p>封装（隐藏的数据）</p>
+<p>应禁止直接访问一个对象中的数据的实际表示，而通过操作接口来访问，称之为信息隐蔽</p>
+</li>
+<li><p>封装大多数是对于 数据来说，对于方法较少使用</p>
+</li>
+</ul>
+<hr>
+<hr>
+<ul>
+<li>对于私有属性 我们需要提供可以访问这个属性的方法</li>
+<li><strong>get/set</strong></li>
+<li>通过get方法去获取这个属性 通set方法去给属性赋值</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071416738.bmp" alt=""></p>
+<hr>
+<ul>
+<li>总结 ——封装好处<ol>
+<li>提高程序的安全性</li>
+<li>隐藏代码的实现细节</li>
+<li>统一接口</li>
+<li>系统可维护性增加了</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="面向对象—继承"><a href="#面向对象—继承" class="headerlink" title="面向对象—继承"></a>面向对象—继承</h4><hr>
+<ul>
+<li>Java中继承只有单继承，没有多继承</li>
+<li><strong>extends</strong></li>
+<li>子类继承父类<ol>
+<li>子类拥有父类的全部的方法（public）</li>
+<li>私有（private）不可继承</li>
+</ol>
+</li>
+<li>Ctrl + h Idel 弹出  继承树</li>
+</ul>
+<hr>
+<h3 id="super-和-this"><a href="#super-和-this" class="headerlink" title="super 和 this"></a>super 和 this</h3><hr>
+<ul>
+<li><p>super的注意点：</p>
+<ol>
+<li>是调用父类的构造方法，必须在构造方法的第一个</li>
+<li>super 必须只能出现在子类的方法和构造函数中</li>
+<li>super和this不能同时调用构造方法  </li>
+</ol>
+</li>
+<li><p>Vs  this：</p>
+<ol>
+<li><p>代表的对象不同：</p>
+<pre><code>this 本身调用者这个对象  
+
+super ：代表父类对象的应用</code></pre></li>
+<li><p>前提：</p>
+<pre><code>this： 没有继承也可以使用
+
+ super：代表父类对象的应用</code></pre></li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><hr>
+<ul>
+<li><strong>重写</strong><ol>
+<li>需要有继承关系，子类重写父类的方法</li>
+<li>方法名必须相同</li>
+<li>参数列表必须相同</li>
+<li>修饰符：范围可以扩大： public &gt; protected &gt;default &gt; private</li>
+<li>抛出的异常 范围  可以被缩小 但不能扩大 </li>
+<li>重写 ：子类的方法和父类必要一致  方法体不同  </li>
+</ol>
+</li>
+<li>为什么需要重写<ol>
+<li>父类的功能，子类不一定需要，或者不一定满足</li>
+</ol>
+</li>
+<li>对于static 方法在继承中的使用 与 （非静态）方法的区别</li>
+<li>还涉及到      <strong>父类引用指向子类</strong></li>
+<li>父类引用指向子类 详解：<a href="https://blog.csdn.net/qq_41160264/article/details/81037752" target="_blank" rel="noopener">博客文章</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417925.bmp" alt="capture_20210828214352478"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071417528.bmp" alt=""></p>
+<hr>
+<h4 id="多态详解"><a href="#多态详解" class="headerlink" title="多态详解"></a>多态详解</h4><ul>
+<li><p>同一个方法可以根据发送对象的的不同而采用多种不同的行为方式</p>
+</li>
+<li><p>多态存在的条件</p>
+<ol>
+<li>有继承关系</li>
+<li>子类重写父类方法</li>
+<li>父类引用指向子类对象</li>
+</ol>
+</li>
+<li><p>注意： 多态是方法的多态，属性没有多态性</p>
+</li>
+<li><p>不可</p>
+<ol>
+<li>static方法 属于类 它不属于实例</li>
+<li>final 常量</li>
+<li>private 方法</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="instanceof-和类型转换"><a href="#instanceof-和类型转换" class="headerlink" title="instanceof 和类型转换"></a>instanceof 和类型转换</h4><ul>
+<li><p>instanceof （类型转换）引用类型  判断一个对象是什么类型</p>
+</li>
+<li><pre><code class="java"><span class="comment">// object  person student</span>
+<span class="comment">// object  person teacher</span>
+Object object = <span class="keyword">new</span> Student(); 
+System.out.println(object <span class="keyword">instanceof</span> Student );
+<span class="comment">// ture </span>
+<span class="comment">// 主要是观看 instanceof 左右两边是否 有继承关系 </span>
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</li>
+<li><p>需要转换条件：</p>
+<ul>
+<li>父类引用指向子类的对象</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
     
@@ -280,12 +423,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/09/17/%E5%BC%82%E5%B8%B8/" rel="prev" title="异常">
-      <i class="fa fa-chevron-left"></i> 异常
+    <a href="/2021/09/17/%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B8%B8%E9%87%8F%EF%BC%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="prev" title="变量，作用域">
+      <i class="fa fa-chevron-left"></i> 变量，作用域
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/09/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB/" rel="next" title="类和对象的关系">
-      类和对象的关系 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/09/17/%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8/" rel="next" title="类的概念和方法的调用">
+      类的概念和方法的调用 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -346,6 +489,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象-封装"><span class="nav-number">1.</span> <span class="nav-text">面向对象-封装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象—继承"><span class="nav-number">1.1.</span> <span class="nav-text">面向对象—继承</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super-和-this"><span class="nav-number">2.</span> <span class="nav-text">super 和 this</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">2.1.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态详解"><span class="nav-number">2.2.</span> <span class="nav-text">多态详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#instanceof-和类型转换"><span class="nav-number">2.3.</span> <span class="nav-text">instanceof 和类型转换</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -361,7 +505,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -374,7 +518,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -411,12 +555,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">12 分钟</span>
 </div>
 <!--
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
