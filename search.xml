@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>java-简谈构造方法</title>
+    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
+<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
+<hr>
+<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
+<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
+{   
+
+    public static void main(String[] args) {
+        Student p1 =new Student(18,&quot;jack&quot;);
+        Student p2 =new Student(19,&quot;jack&quot;);
+        p1.printlnof();
+        p2.getAge();
+        p2.printlnof();
+    }
+}
+
+    class Student{
+        private int age;
+        private String name;
+            public Student(int age,String name) {
+                this.age=age;
+                this.name=name;
+            }
+            public void printlnof() {
+                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
+            }
+            public void getAge() {
+                int s=10;
+                age+=s;
+            }
+    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>构造方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/06/19/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Scanner</title>
     <url>/2021/09/17/Scanner/</url>
     <content><![CDATA[<hr>
@@ -27,6 +89,124 @@
       </categories>
       <tags>
         <tag>Scanner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java中的匿名函数</title>
+    <url>/2021/04/11/java%E4%B8%AD%E7%9A%84%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>
+<h3 id="匿名函数的注意点及使用"><a href="#匿名函数的注意点及使用" class="headerlink" title="匿名函数的注意点及使用"></a>匿名函数的注意点及使用</h3><hr>
+<p>*例  简单概念</p>
+<pre><code>public class Demo_Anonymous {
+
+    public static void main(String[] args) {
+        Person one = new Person();
+        one.name = &quot;张三&quot;;
+        one.showName();
+
+        System.out.println(&quot;=====================&quot;);
+
+        new Person().name=&quot;lisa&quot;;
+        new Person().showName();  // 匿名对象只能调用一次  第二次使用则为创新了一个新的匿名对象
+    }
+
+}
+    class Person{
+        String name;
+
+        public void showName() {
+            System.out.println(name);
+        }
+
+    }</code></pre><hr>
+<ul>
+<li>匿名对象作为方法的参数列表</li>
+</ul>
+<pre><code>import java.util.Scanner;
+
+public class Demo_06 {
+public static void main(String[] args) {
+
+
+     // 匿名对象的方法
+//    int num = new Scanner(System.in).nextInt();
+//    
+//    System.out.println(&quot;输出的数字： &quot;+ num);
+
+    // 匿名对象 作为方法的参数列表
+    Anonymous_ways(new Scanner(System.in));
+}
+
+    public static void Anonymous_ways(Scanner sc) {
+        int num = sc.nextInt();
+        System.out.println(&quot;输出的数字是： &quot; + num);
+    }
+}</code></pre><hr>
+<ul>
+<li>匿名方法作为 方法的返回值 </li>
+</ul>
+<pre><code>
+import java.util.Scanner;
+
+public class Deom {
+public static void main(String[] args) {
+    // 匿名对象作为方法的返回值
+
+
+    Scanner  sc = methodReturn();
+    int num = sc.nextInt();
+    System.out.println(&quot;输出的数是： &quot; + num);
+
+    //System.out.println(sc.nextInt());     也可
+
+
+
+}
+    public static Scanner methodReturn() {
+        return new Scanner(System.in);
+
+    }
+
+}
+
+</code></pre>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>匿名函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java-方法</title>
+    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
+<ul>
+<li>方法的使用是为了增加代码的重复利用性   </li>
+</ul>
+<ol>
+<li>方法在Java中相当于一种机制：   </li>
+</ol>
+<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
+<hr>
+<ul>
+<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
+<li>方法内不能再写方法  </li>
+<li>类体内可以定义多个方法   </li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法</tag>
       </tags>
   </entry>
   <entry>
@@ -72,66 +252,97 @@ public class Demo_arrylist {
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/06/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>java-简谈构造方法</title>
-    <url>/2020/06/20/java-%E7%AE%80%E8%B0%88%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="构造方法的三个特点："><a href="#构造方法的三个特点：" class="headerlink" title="构造方法的三个特点："></a>构造方法的三个特点：</h2><a id="more"></a>
-<p>1.构造方法的名称必须与类的名称相同<br>2.构造方法的前面没有返还类型 ： public run（）{}<br>3.如果你没有在类中定义构造方法，那么在编译阶段，编译器会自动给出一个构造方法，也就是说，编译器会在编译阶段在字节码文件中补充添加一个构造方法，此构造方法是没有参数的。  </p>
+    <title>markdown-基本语法</title>
+    <url>/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>   
+<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示： "></a>效果展示： </h2><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>   </p>
+<p><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>   </p>
+<blockquote>
+<p>这是引用的内容  </p>
+</blockquote>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
 <hr>
-<p>教科书上一般定义为：构造方法是为了创建一个对象   晦涩难懂  </p>
-<p>另一种简单的的说法： 初始化对象的内部状态 就是说给对象的各个属性赋初值  </p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><pre><code>public class test1 
-{   
+<hr>
+<p>添加图片的方法：<br><img src="https://s1.ax1x.com/2020/06/21/N14qQs.png" alt="元素">   </p>
+<p>添加超链接：<br><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a>   </p>
+<p>无序列表<br>语法：<br>   用 - + * 任何一种都可以   </p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容<br>注意：- + * 跟内容之间都要有一个空格   </li>
+</ul>
+<p>有序列表<br>语法：<br>数字加点   </p>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容<br>注意：序号跟内容之间要有空格   </li>
+</ol>
+<p>代码处理：<br>语法：<br>单行代码：代码之间分别用一个反引号包起来<br> <code>代码内容</code>   </p>
+<p> 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>(<code>)
+  代码...
+  代码...
+  代码...   
+(</code>)   </p>
+<hr>
+<h2 id="语法示例："><a href="#语法示例：" class="headerlink" title="语法示例："></a>语法示例：</h2><pre><code># 这是一级标题  
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
 
-    public static void main(String[] args) {
-        Student p1 =new Student(18,&quot;jack&quot;);
-        Student p2 =new Student(19,&quot;jack&quot;);
-        p1.printlnof();
-        p2.getAge();
-        p2.printlnof();
-    }
-}
+**这是加粗的文字**   
+*这是倾斜的文字*   
 
-    class Student{
-        private int age;
-        private String name;
-            public Student(int age,String name) {
-                this.age=age;
-                this.name=name;
-            }
-            public void printlnof() {
-                System.out.println(&quot;age: &quot;+age+&quot; name: &quot;+name);
-            }
-            public void getAge() {
-                int s=10;
-                age+=s;
-            }
-    }</code></pre><p>// 所谓  构造方法就是  对类的内部进行初始化</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>构造方法</tag>
-      </tags>
+***这是斜体加粗的文字***   
+~~这是加删除线的文字~~   
+&gt;这是引用的内容  
+
+分割线
+---
+----
+***
+*****   
+添加图片的方法：   
+![元素](https://s1.ax1x.com/2020/06/21/N14qQs.png)   
+
+添加超链接：  
+[简书](http://jianshu.com)   
+[百度](http://baidu.com)   
+
+无序列表   
+语法：
+   用 - + * 任何一种都可以   
+- 列表内容
++ 列表内容
+* 列表内容   
+注意：- + * 跟内容之间都要有一个空格   
+
+有序列表   
+语法：
+数字加点   
+1. 列表内容
+2. 列表内容
+3. 列表内容   
+注意：序号跟内容之间要有空格   
+
+代码处理：   
+语法：
+单行代码：代码之间分别用一个反引号包起来   
+ `代码内容`   
+
+ 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行   
+(```)
+  代码...
+  代码...
+  代码...   
+(```)   
+</code></pre>]]></content>
   </entry>
   <entry>
     <title>变量，作用域</title>
@@ -236,90 +447,38 @@ public class Demo_arrylist {
       </tags>
   </entry>
   <entry>
-    <title>java中的匿名函数</title>
-    <url>/2021/04/11/java%E4%B8%AD%E7%9A%84%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <title>抽象类</title>
+    <url>/2021/09/17/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
     <content><![CDATA[<hr>
 <a id="more"></a>
-<h3 id="匿名函数的注意点及使用"><a href="#匿名函数的注意点及使用" class="headerlink" title="匿名函数的注意点及使用"></a>匿名函数的注意点及使用</h3><hr>
-<p>*例  简单概念</p>
-<pre><code>public class Demo_Anonymous {
-
-    public static void main(String[] args) {
-        Person one = new Person();
-        one.name = &quot;张三&quot;;
-        one.showName();
-
-        System.out.println(&quot;=====================&quot;);
-
-        new Person().name=&quot;lisa&quot;;
-        new Person().showName();  // 匿名对象只能调用一次  第二次使用则为创新了一个新的匿名对象
-    }
-
-}
-    class Person{
-        String name;
-
-        public void showName() {
-            System.out.println(name);
-        }
-
-    }</code></pre><hr>
+<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><hr>
+<hr>
 <ul>
-<li>匿名对象作为方法的参数列表</li>
+<li>用 abstract 修饰的类 </li>
+<li>抽象类中可以没有抽象方法但是一定要声明为抽象类</li>
+<li>抽象类不可以用new 关键字创建对象，它是用来被子类继承的</li>
+<li>抽象方法，只有方法的声明没有方法的实现，它是用来让子类实现的</li>
+<li>子类继承抽象类，那么一定要实现抽象类的方法否则该子类就要声明为抽象类</li>
 </ul>
-<pre><code>import java.util.Scanner;
-
-public class Demo_06 {
-public static void main(String[] args) {
-
-
-     // 匿名对象的方法
-//    int num = new Scanner(System.in).nextInt();
-//    
-//    System.out.println(&quot;输出的数字： &quot;+ num);
-
-    // 匿名对象 作为方法的参数列表
-    Anonymous_ways(new Scanner(System.in));
-}
-
-    public static void Anonymous_ways(Scanner sc) {
-        int num = sc.nextInt();
-        System.out.println(&quot;输出的数字是： &quot; + num);
-    }
-}</code></pre><hr>
-<ul>
-<li>匿名方法作为 方法的返回值 </li>
+<hr>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
+<li>interface  关键字</li>
+<li>继承接口用 implement</li>
+<li>接口是继承类更高标准 的约束</li>
+<li>接口可以多继承</li>
+<li>接口不是类  不可以实例化 </li>
+<li>作用：<ol>
+<li>一个约束</li>
+<li>可以定义一些方法让不同人去实现</li>
+</ol>
+</li>
 </ul>
-<pre><code>
-import java.util.Scanner;
-
-public class Deom {
-public static void main(String[] args) {
-    // 匿名对象作为方法的返回值
-
-
-    Scanner  sc = methodReturn();
-    int num = sc.nextInt();
-    System.out.println(&quot;输出的数是： &quot; + num);
-
-    //System.out.println(sc.nextInt());     也可
-
-
-
-}
-    public static Scanner methodReturn() {
-        return new Scanner(System.in);
-
-    }
-
-}
-
-</code></pre>]]></content>
+]]></content>
       <categories>
-        <category>Java</category>
+        <category>java</category>
       </categories>
       <tags>
-        <tag>匿名函数</tag>
+        <tag>抽象类</tag>
       </tags>
   </entry>
   <entry>
@@ -341,6 +500,38 @@ public static void main(String[] args) {
       </categories>
       <tags>
         <tag>可变参数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>方法的定义和调用</title>
+    <url>/2021/09/17/%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/</url>
+    <content><![CDATA[<hr>
+<a id="more"></a>  
+
+<h3 id="方法的定义和调用简单使用"><a href="#方法的定义和调用简单使用" class="headerlink" title="方法的定义和调用简单使用"></a>方法的定义和调用简单使用</h3><hr>
+<hr>
+<ul>
+<li>简单的一个程序</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 比大小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">            result = a;</span><br><span class="line">        &#125;<span class="keyword">else</span> result =b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中方法加上了static则为类方法 在main方法中就可以直接调用</li>
+</ul>
+<hr>
+<h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><ol>
+<li>方法的名称必须相同</li>
+<li>参数列表必须不同</li>
+<li>方法的返回类型可以相同可以不同</li>
+<li>仅仅只有返回类型不同 不可   </li>
+</ol>
+<p>原理：是 通过 Java 虚拟机根据 调用的方法自行对参数个数，参数类型等逐个匹配 聪儿选择对应的方法</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>方法的定义和调用</tag>
       </tags>
   </entry>
   <entry>
@@ -397,122 +588,42 @@ public static void main(String[] args) {
       </tags>
   </entry>
   <entry>
-    <title>markdown-基本语法</title>
-    <url>/2020/06/21/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <title>自增自减符号</title>
+    <url>/2021/09/17/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E7%AC%A6%E5%8F%B7/</url>
     <content><![CDATA[<hr>
 <a id="more"></a>   
-<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示： "></a>效果展示： </h2><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>   </p>
-<p><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>   </p>
-<blockquote>
-<p>这是引用的内容  </p>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
+<h4 id="自增自减符号、Math类、位运算符"><a href="#自增自减符号、Math类、位运算符" class="headerlink" title="自增自减符号、Math类、位运算符"></a>自增自减符号、Math类、位运算符</h4><hr>
+<ul>
+<li><p>简单理解</p>
+</li>
+<li><p>一个例子</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> b = a++;</span><br><span class="line"><span class="comment">// 这里隐藏了一个 a = a+1；</span></span><br><span class="line">        System.out.println(a);</span><br><span class="line">        System.out.println(b);</span><br><span class="line">        <span class="keyword">int</span> c = ++a;</span><br><span class="line">        System.out.println(c);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 3</span></span><br><span class="line"><span class="comment"> * 2</span></span><br><span class="line"><span class="comment"> * 4</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <hr>
+<ul>
+<li>幂运算 使用工具类运算</li>
+<li>Math类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 2的三次方</span></span><br><span class="line"><span class="keyword">double</span> a = Math.pow(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">// -&gt; 8</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<p>添加图片的方法：<br><img src="https://s1.ax1x.com/2020/06/21/N14qQs.png" alt="元素">   </p>
-<p>添加超链接：<br><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a>   </p>
-<p>无序列表<br>语法：<br>   用 - + * 任何一种都可以   </p>
 <ul>
-<li>列表内容</li>
+<li><p>位运算</p>
+<p>A = 0011 1100</p>
+<p>B = 0000 1101</p>
+<p>A^B  = 0011 0001    // 异或  相同取0 相异取1</p>
+<p>~B = 1111 0010       // 取反 </p>
+</li>
 </ul>
+<hr>
 <ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容<br>注意：- + * 跟内容之间都要有一个空格   </li>
-</ul>
-<p>有序列表<br>语法：<br>数字加点   </p>
+<li><p>&lt;&lt;    &gt;&gt;</p>
 <ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容<br>注意：序号跟内容之间要有空格   </li>
-</ol>
-<p>代码处理：<br>语法：<br>单行代码：代码之间分别用一个反引号包起来<br> <code>代码内容</code>   </p>
-<p> 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>(<code>)
-  代码...
-  代码...
-  代码...   
-(</code>)   </p>
-<hr>
-<h2 id="语法示例："><a href="#语法示例：" class="headerlink" title="语法示例："></a>语法示例：</h2><pre><code># 这是一级标题  
-## 这是二级标题
-### 这是三级标题
-#### 这是四级标题
-##### 这是五级标题
-###### 这是六级标题
-
-**这是加粗的文字**   
-*这是倾斜的文字*   
-
-***这是斜体加粗的文字***   
-~~这是加删除线的文字~~   
-&gt;这是引用的内容  
-
-分割线
----
-----
-***
-*****   
-添加图片的方法：   
-![元素](https://s1.ax1x.com/2020/06/21/N14qQs.png)   
-
-添加超链接：  
-[简书](http://jianshu.com)   
-[百度](http://baidu.com)   
-
-无序列表   
-语法：
-   用 - + * 任何一种都可以   
-- 列表内容
-+ 列表内容
-* 列表内容   
-注意：- + * 跟内容之间都要有一个空格   
-
-有序列表   
-语法：
-数字加点   
-1. 列表内容
-2. 列表内容
-3. 列表内容   
-注意：序号跟内容之间要有空格   
-
-代码处理：   
-语法：
-单行代码：代码之间分别用一个反引号包起来   
- `代码内容`   
-
- 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行   
-(```)
-  代码...
-  代码...
-  代码...   
-(```)   
-</code></pre>]]></content>
-  </entry>
-  <entry>
-    <title>抽象类</title>
-    <url>/2021/09/17/%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>
-<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><hr>
-<hr>
-<ul>
-<li>用 abstract 修饰的类 </li>
-<li>抽象类中可以没有抽象方法但是一定要声明为抽象类</li>
-<li>抽象类不可以用new 关键字创建对象，它是用来被子类继承的</li>
-<li>抽象方法，只有方法的声明没有方法的实现，它是用来让子类实现的</li>
-<li>子类继承抽象类，那么一定要实现抽象类的方法否则该子类就要声明为抽象类</li>
-</ul>
-<hr>
-<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
-<li>interface  关键字</li>
-<li>继承接口用 implement</li>
-<li>接口是继承类更高标准 的约束</li>
-<li>接口可以多继承</li>
-<li>接口不是类  不可以实例化 </li>
-<li>作用：<ol>
-<li>一个约束</li>
-<li>可以定义一些方法让不同人去实现</li>
+<li><p>&lt;&lt;   左移 相当于 *2  &gt;&gt; 右移  相当于 /2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418619.bmp" alt=""></p>
+</li>
 </ol>
 </li>
 </ul>
@@ -521,70 +632,7 @@ public static void main(String[] args) {
         <category>java</category>
       </categories>
       <tags>
-        <tag>抽象类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>方法的定义和调用</title>
-    <url>/2021/09/17/%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>  
-
-<h3 id="方法的定义和调用简单使用"><a href="#方法的定义和调用简单使用" class="headerlink" title="方法的定义和调用简单使用"></a>方法的定义和调用简单使用</h3><hr>
-<hr>
-<ul>
-<li>简单的一个程序</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 比大小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">            result = a;</span><br><span class="line">        &#125;<span class="keyword">else</span> result =b;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>其中方法加上了static则为类方法 在main方法中就可以直接调用</li>
-</ul>
-<hr>
-<h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><ol>
-<li>方法的名称必须相同</li>
-<li>参数列表必须不同</li>
-<li>方法的返回类型可以相同可以不同</li>
-<li>仅仅只有返回类型不同 不可   </li>
-</ol>
-<p>原理：是 通过 Java 虚拟机根据 调用的方法自行对参数个数，参数类型等逐个匹配 聪儿选择对应的方法</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>方法的定义和调用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java-方法</title>
-    <url>/2020/07/23/java-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<a id="more"></a>   
-<h2 id="1-0-方法"><a href="#1-0-方法" class="headerlink" title="1.0 方法"></a>1.0 方法</h2><hr>
-<ul>
-<li>方法的使用是为了增加代码的重复利用性   </li>
-</ul>
-<ol>
-<li>方法在Java中相当于一种机制：   </li>
-</ol>
-<p>–某个功能只需要写一遍<br>–在使用这个功能时，只需传入相应的数据<br>–可以完成某个特定的功能，可以重复利用   </p>
-<hr>
-<ul>
-<li>例子：a+b=c 这个功能只需写一遍<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class show_function&#123;  </span><br><span class="line">&#x2F;&#x2F; 类体</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show_function.sumLnt(10,20);</span><br><span class="line">        show_function.sumLnt(99,20);</span><br><span class="line">        show_function.sumLnt(200,901);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sumLnt(int a,int b)&#123;</span><br><span class="line">      int c&#x3D; a + b;</span><br><span class="line">      System.out.println(a + &quot; + &quot; + b &quot; &#x3D; &quot; + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>方法内不能再写方法  </li>
-<li>类体内可以定义多个方法   </li>
-</ol>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>方法</tag>
+        <tag>自增自减符号</tag>
       </tags>
   </entry>
   <entry>
@@ -677,70 +725,6 @@ public static void main(String[] args) {
       </categories>
       <tags>
         <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稀疏数组</title>
-    <url>/2021/09/17/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<a id="more"></a>
-<h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><hr>
-<img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418190.bmp" style="zoom: 50%;" />
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建稀疏数组并打印</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">textDemo08</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个11*11 的数组  其中 1表示白棋 2表示黑棋</span></span><br><span class="line">        <span class="keyword">int</span>[][] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        arr[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        arr[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        arr[<span class="number">10</span>][<span class="number">10</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"棋盘"</span>);</span><br><span class="line">        printArray(arr);</span><br><span class="line">        printXArray(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    打印棋盘</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span>  <span class="title">printArray</span><span class="params">(<span class="keyword">int</span>[][] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] ints : arr) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> anInt : ints) &#123;</span><br><span class="line">                System.out.print(anInt+<span class="string">"\t"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    将棋盘转换成稀疏数组</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printXArray</span><span class="params">(<span class="keyword">int</span>[][] arr)</span></span>&#123;</span><br><span class="line"><span class="comment">//        输出有效行的个数</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//        创建一个稀疏数组对应的数组</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[][] array =<span class="keyword">new</span> <span class="keyword">int</span>[count+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">0</span>] =<span class="number">11</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">1</span>] =<span class="number">11</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">2</span>] = count;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr[i].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                    array[sum][<span class="number">0</span>]=i;</span><br><span class="line">                    array[sum][<span class="number">1</span>]=j;</span><br><span class="line">                    array[sum][<span class="number">2</span>]=arr[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printArray(array);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>稀疏数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自增自减符号</title>
-    <url>/2021/09/17/%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E7%AC%A6%E5%8F%B7/</url>
-    <content><![CDATA[<a id="more"></a>
-<h4 id="自增自减符号、Math类、位运算符"><a href="#自增自减符号、Math类、位运算符" class="headerlink" title="自增自减符号、Math类、位运算符"></a>自增自减符号、Math类、位运算符</h4><hr>
-<ul>
-<li><p>简单理解</p>
-</li>
-<li><p>一个例子</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> b = a++;</span><br><span class="line"><span class="comment">// 这里隐藏了一个 a = a+1；</span></span><br><span class="line">        System.out.println(a);</span><br><span class="line">        System.out.println(b);</span><br><span class="line">        <span class="keyword">int</span> c = ++a;</span><br><span class="line">        System.out.println(c);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 3</span></span><br><span class="line"><span class="comment"> * 2</span></span><br><span class="line"><span class="comment"> * 4</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<ul>
-<li>幂运算 使用工具类运算</li>
-<li>Math类</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 2的三次方</span></span><br><span class="line"><span class="keyword">double</span> a = Math.pow(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">// -&gt; 8</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<ul>
-<li><p>位运算</p>
-<p>A = 0011 1100</p>
-<p>B = 0000 1101</p>
-<p>A^B  = 0011 0001    // 异或  相同取0 相异取1</p>
-<p>~B = 1111 0010       // 取反 </p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>&lt;&lt;    &gt;&gt;</p>
-<ol>
-<li><p>&lt;&lt;   左移 相当于 *2  &gt;&gt; 右移  相当于 /2</p>
-<p><img src="https://cdn.jsdelivr.net/gh/codebear2/pictureRepository/images/202109071418619.bmp" alt=""></p>
-</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>自增自减符号</tag>
       </tags>
   </entry>
   <entry>
@@ -877,19 +861,6 @@ System.out.println(object <span class="keyword">instanceof</span> Student );
 </ul>
 </li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>冒泡排序</title>
-    <url>/2021/09/17/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<hr>
-<p>layout: w<br>title: 冒泡排序<br>date: 2021-09-17 14:55:31<br>tags: 冒泡排序<br>categories: java</p>
-<hr>
-<hr>
-<a id="more"></a>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能：冒泡排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">textDemo07</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">56</span>,<span class="number">63</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">6</span>,<span class="number">23</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] sort = sort(a);</span><br><span class="line">        System.out.println(Arrays.toString(sort));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] sort(<span class="keyword">int</span>[] arrays)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arrays.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line"><span class="comment">// 减掉一个i 可以减少循环次数</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;arrays.length-<span class="number">1</span>-i; j++) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (arrays[j+<span class="number">1</span>] &lt; arrays[j])&#123;</span><br><span class="line">                    temp = arrays[j];</span><br><span class="line">                    arrays[j] = arrays[j+<span class="number">1</span>];</span><br><span class="line">                    arrays[j+<span class="number">1</span>] =temp;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arrays;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// [1, 3, 3, 4, 6, 23, 25, 56, 63]</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
 </search>
